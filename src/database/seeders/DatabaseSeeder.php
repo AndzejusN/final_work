@@ -14,6 +14,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            InquiryStatesSeeder::class,
+            UserPermissionsSeeder::class,
+            MeasuresSeeder::class,
+            PrioritiesSeeder::class
+        ]);
+
+        \App\Models\User::factory(20)->create();
+        \App\Models\File::factory(20)->create();
+        \App\Models\Product::factory(20)->create();
+        \App\Models\Inquiry::factory(20)->create();
     }
 }

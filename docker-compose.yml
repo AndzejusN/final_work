@@ -2,15 +2,15 @@ version: "3.9"
 services:
     nginx:
         build: ./nginx/
-        container_name: codeacademy-laravel-nginx
+        container_name: laravel-nginx
         working_dir: /home/shooop
         ports:
-            - 8085:80
+            - 8080:80
         volumes:
             - ./src:/home/shooop
     php:
         build: ./php/
-        container_name: codeacademy-laravel-php
+        container_name: laravel-php
         working_dir: /home/shooop
         volumes: 
             - ./src:/home/shooop
@@ -18,11 +18,11 @@ services:
         env_file:
             - ./src/.env
     db:
-        container_name: codeacademy-laravel-db
+        container_name: laravel-db
         image: mariadb:10.6.5
         env_file:
             - ./mysql/.env
         volumes:
             - ./mysql/data:/var/lib/mysql
         ports:
-            - 3336:3306
+            - 3330:3306

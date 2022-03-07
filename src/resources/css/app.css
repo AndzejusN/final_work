@@ -1,0 +1,34 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    background-color: lightsteelblue;
+}
+
+.logo {
+    border-radius: 15px;
+    border: 2px solid #fff;
+    height: 240px;
+    width: 300px;
+}
+
+#main-input {
+    background-color: rgb(219, 228, 241);
+    border: 2px solid #fff;
+}
+
+#main-submit{
+    border: 2px solid #fff;
+    background-color: #a7b7e0;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: -1px;
+    text-shadow: -1px 0 #a7b7e0, 0 1px #a7b7e0, 1px 0 #a7b7e0, 0 -1px #a7b7e0;
+}
+
+#main-submit:hover{
+    color: #a7b7e0;
+    background-color: #fff;
+    text-shadow: none;
+    border-color: lightsteelblue;
+}
