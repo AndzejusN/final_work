@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->bigInteger('product_id')->unsigned();
             $table->string('inquiry_state', 30);
             $table->timestamps();
+            $table->softDeletes();
         });
 
         Schema::table('inquiries', function (Blueprint $table) {
@@ -39,5 +40,9 @@ return new class extends Migration {
     public function down()
     {
         Schema::dropIfExists('inquiries');
+
+        Schema::table('flights', function (Blueprint $table) {
+            $table->dropSoftDeletes();
+        });
     }
 };

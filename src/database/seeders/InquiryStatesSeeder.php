@@ -17,9 +17,9 @@ class InquiryStatesSeeder extends Seeder
     {
 
         $states = [
-            'High',
-            'Middle',
-            'Low'
+            'Empty',
+            'Partly',
+            'Fully'
         ];
 
         foreach ($states as $state) {

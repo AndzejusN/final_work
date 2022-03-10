@@ -4,98 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="1-st commit">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/custom-entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/AuthenticatedSessionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/ConfirmablePasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/EmailVerificationNotificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/EmailVerificationPromptController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/NewPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/PasswordResetLinkController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/VerifyEmailController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Middleware/IsUserActive.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Requests/Auth/LoginRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Models/File.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Models/Inquiry.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Models/InquiryState.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Models/Priority.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Models/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/View/Components/AppLayout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/View/Components/GuestLayout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/factories/FileFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/factories/InquiryFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/factories/ProductFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2021_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2021_10_12_200000_create_failed_jobs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_02_100955_create_measures_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_092500_create_priorities_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093308_create_files_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/seeders/InquiryStatesSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/seeders/PrioritiesSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/auth/confirm-password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/auth/forgot-password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/auth/reset-password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/auth/verify-email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/application-logo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/auth-card.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/auth-session-status.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/auth-validation-errors.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/button.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/dropdown-link.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/dropdown.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/input.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/label.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/nav-link.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/components/responsive-nav-link.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/layouts/guest.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/main.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Feature/Auth/PasswordConfirmationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Feature/Auth/RegistrationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CA_final_work.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CA_final_work.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/src/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2021_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_02_13_175116_create_countries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093530_create_inquiries_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_02_14_174846_create_user_addresses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093201_create_inquiry_states_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_02_14_181303_create_product_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2021_10_11_091838_create_user_permissions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_02_14_181414_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2021_10_12_300000_create_personal_access_tokens_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/webpack.mix.js" afterDir="false" />
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="2-nd commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/Inquiry.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Inquiry.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093530_create_inquiries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093530_create_inquiries_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/seeders/InquiryStatesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/InquiryStatesSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +196,17 @@
       <workItem from="1646297820009" duration="14704000" />
       <workItem from="1646585697609" duration="13061000" />
       <workItem from="1646668398287" duration="82000" />
+      <workItem from="1646668894394" duration="130000" />
+      <workItem from="1646921325411" duration="1081000" />
     </task>
+    <task id="LOCAL-00001" summary="2-nd commit">
+      <created>1646669004181</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1646669004182</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +227,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1-st commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1-st commit" />
+    <MESSAGE value="2-nd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2-nd commit" />
   </component>
 </project>

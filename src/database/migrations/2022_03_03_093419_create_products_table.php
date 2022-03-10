@@ -24,6 +24,8 @@ return new class extends Migration
             $table->integer('delivery_term')->unsigned();
             $table->bigInteger('file_id')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
+
         });
 
         Schema::table('products', function (Blueprint $table) {
@@ -45,5 +47,9 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('products');
+
+        Schema::table('flights', function (Blueprint $table) {
+            $table->dropSoftDeletes();
+        });
     }
 };
