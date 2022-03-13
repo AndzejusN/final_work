@@ -10,7 +10,7 @@ Route::get('welcome', function () {
 });
 
 Route::get('/', function () {
-    return view('index', ['page_name' => 'Main page']);
+    return view('index', ['page_name' => 'Index page']);
 });
 
 Route::get('/admin', function () {
