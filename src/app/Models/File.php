@@ -10,4 +10,10 @@ class File extends Model
     use HasFactory;
 
     protected $table = 'files';
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'id','product_id');
+    }
+
 }

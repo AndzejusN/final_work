@@ -26,7 +26,6 @@ class ProductFactory extends Factory
             'quantity' => $this->faker->randomDigit(),
             'price' => $this->faker->numberBetween(1, 1000),
             'delivery_term' => $this->faker->numberBetween(1, 10),
-            'file_id' => optional(File::inRandomOrder()->first())->id
         ];
     }
 }

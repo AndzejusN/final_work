@@ -11,4 +11,9 @@ class Product extends Model
 
     protected $table = 'products';
 
+    public function measure()
+    {
+        return $this->belongsTo(Measure::class, 'name','measure');
+    }
+
 }

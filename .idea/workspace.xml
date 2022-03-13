@@ -4,12 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="2-nd commit">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Added SoftDelete/ Changed Inquiry States data">
+      <change afterPath="$PROJECT_DIR$/src/resources/views/action.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/views/registration.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/File.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Models/Inquiry.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Inquiry.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/factories/FileFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/FileFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/ProductFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2021_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2021_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093308_create_files_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093420_create_files_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093530_create_inquiries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093530_create_inquiries_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/seeders/InquiryStatesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/InquiryStatesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/seeders/UserPermissionsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/UserPermissionsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +193,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views" />
+      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views\admin" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -198,6 +217,12 @@
       <workItem from="1646668398287" duration="82000" />
       <workItem from="1646668894394" duration="130000" />
       <workItem from="1646921325411" duration="1081000" />
+      <workItem from="1646922448959" duration="59000" />
+      <workItem from="1646922585128" duration="2437000" />
+      <workItem from="1647120611440" duration="5385000" />
+      <workItem from="1647126196074" duration="152000" />
+      <workItem from="1647152471612" duration="22539000" />
+      <workItem from="1647181008460" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -206,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646669004182</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added SoftDelete/ Changed Inquiry States data">
+      <created>1646922493935</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646922493935</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +260,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1-st commit" />
     <MESSAGE value="2-nd commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="2-nd commit" />
+    <MESSAGE value="Added SoftDelete/ Changed Inquiry States data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added SoftDelete/ Changed Inquiry States data" />
   </component>
 </project>

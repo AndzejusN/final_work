@@ -23,7 +23,6 @@ body {
     background-color: #a7b7e0;
     font-family: "Times New Roman", Times, serif;
     letter-spacing: -1px;
-    text-shadow: -1px 0 #a7b7e0, 0 1px #a7b7e0, 1px 0 #a7b7e0, 0 -1px #a7b7e0;
 }
 
 #main-submit:hover{

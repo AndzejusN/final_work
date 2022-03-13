@@ -22,7 +22,6 @@ return new class extends Migration
             $table->decimal('quantity', 9, 3)->unsigned();
             $table->decimal('price', 8, 2)->unsigned();
             $table->integer('delivery_term')->unsigned();
-            $table->bigInteger('file_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
 
@@ -32,9 +31,6 @@ return new class extends Migration
 
             $table->foreign('measure')->references('name')
                 ->on('product_measures')->onDelete('restrict');
-
-            $table->foreign('file_id')->references('id')
-                ->on('files')->onDelete('cascade');
 
         });
     }
@@ -48,7 +44,7 @@ return new class extends Migration
     {
         Schema::dropIfExists('products');
 
-        Schema::table('flights', function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             $table->dropSoftDeletes();
         });
     }

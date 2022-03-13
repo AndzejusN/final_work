@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Arr;
 
@@ -20,7 +21,8 @@ class FileFactory extends Factory
         return [
             'item_name' => $this->faker->words(1, TRUE),
             'item_type' => $this->faker->fileExtension(),
-            'path' => 'storage/'
+            'path' => 'storage/',
+            'product_id' => optional(Product::inRandomOrder()->first())->id
         ];
     }
 }

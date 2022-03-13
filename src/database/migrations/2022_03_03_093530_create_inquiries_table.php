@@ -41,7 +41,7 @@ return new class extends Migration {
     {
         Schema::dropIfExists('inquiries');
 
-        Schema::table('flights', function (Blueprint $table) {
+        Schema::table('inquiries', function (Blueprint $table) {
             $table->dropSoftDeletes();
         });
     }

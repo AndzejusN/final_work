@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('product_id')->unsigned();
             $table->string('item_name',255);
             $table->string('item_type',255);
             $table->string('path',255);

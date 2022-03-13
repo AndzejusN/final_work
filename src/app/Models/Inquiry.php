@@ -12,4 +12,10 @@ class Inquiry extends Model
     use SoftDeletes;
 
     protected $table = 'inquiries';
+
+    public function state()
+    {
+        return $this->belongsTo(InquiryState::class, 'name','inquiry_state');
+    }
+
 }
