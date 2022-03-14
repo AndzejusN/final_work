@@ -21,9 +21,9 @@ class DatabaseSeeder extends Seeder
             PrioritiesSeeder::class
         ]);
 
-        \App\Models\User::factory(20)->create();
-        \App\Models\Product::factory(20)->create();
-        \App\Models\File::factory(20)->create();
-        \App\Models\Inquiry::factory(20)->create();
+        \App\Models\User::factory(10)->create();
+        \App\Models\Product::factory(10)->create();
+        \App\Models\File::factory(10)->create();
+        \App\Models\Inquiry::factory(10)->create();
     }
 }

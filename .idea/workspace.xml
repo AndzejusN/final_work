@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Auth / Breeze 2">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Auth / Breeze 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2021_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2021_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/seeders/UserPermissionsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/UserPermissionsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +44,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/src/vendor/nette/schema" />
@@ -158,16 +175,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/database/migrations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/storage/framework" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\storage\framework" />
+      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Requests\Auth" />
+      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Middleware" />
+      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Controllers\Auth" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\database\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -201,7 +223,15 @@
       <workItem from="1647120611440" duration="5385000" />
       <workItem from="1647126196074" duration="152000" />
       <workItem from="1647152471612" duration="22539000" />
-      <workItem from="1647181008460" duration="795000" />
+      <workItem from="1647181008460" duration="827000" />
+      <workItem from="1647181882461" duration="20153000" />
+      <workItem from="1647247783236" duration="543000" />
+      <workItem from="1647248364558" duration="1601000" />
+      <workItem from="1647249998773" duration="296000" />
+      <workItem from="1647250473868" duration="183000" />
+      <workItem from="1647250887264" duration="1912000" />
+      <workItem from="1647252917271" duration="2515000" />
+      <workItem from="1647256537091" duration="7098000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -231,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647181652907</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Auth / Breeze 3">
+      <created>1647181818882</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647181818882</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +293,12 @@
     <MESSAGE value="Added SoftDelete/ Changed Inquiry States data" />
     <MESSAGE value="Auth / Breeze" />
     <MESSAGE value="Auth / Breeze 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auth / Breeze 2" />
+    <MESSAGE value="Auth / Breeze 3" />
+    <MESSAGE value="Auth / Breeze 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auth / Breeze 4" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
