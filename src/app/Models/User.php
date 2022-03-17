@@ -47,6 +47,6 @@ class User extends Authenticatable
 
     public function permission()
     {
-        return $this->belongsTo(Permission::class, 'name','permission');
+        return $this->belongsTo(Permission::class, 'permission','name');
     }
 }

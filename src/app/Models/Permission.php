@@ -11,4 +11,9 @@ class Permission extends Model
 
     protected $table = 'user_permissions';
 
+    public function user()
+    {
+        return $this->hasMany(User::class, 'name', 'permission');
+    }
+
 }

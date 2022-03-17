@@ -4,30 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Auth / Breeze 4">
-      <change afterPath="$PROJECT_DIR$/src/resources/views/admin/index.blade.php" afterDir="false" />
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Routes prefix used">
+      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/AuthenticatedSessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/AuthenticatedSessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/IsUserActive.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Middleware/IsUserActive.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/PermissionController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Permission.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2021_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2021_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/seeders/UserPermissionsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/UserPermissionsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +224,7 @@
       <workItem from="1647256537091" duration="12695000" />
       <workItem from="1647333017630" duration="18800000" />
       <workItem from="1647415914108" duration="14648000" />
-      <workItem from="1647508232278" duration="1885000" />
+      <workItem from="1647508232278" duration="10292000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -285,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647271952392</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Routes prefix used">
+      <created>1647510175405</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647510175405</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +302,8 @@
     <MESSAGE value="Auth / Breeze 2" />
     <MESSAGE value="Auth / Breeze 3" />
     <MESSAGE value="Auth / Breeze 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auth / Breeze 4" />
+    <MESSAGE value="Routes prefix used" />
+    <option name="LAST_COMMIT_MESSAGE" value="Routes prefix used" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -13,9 +13,9 @@ Route::prefix('admin')->group(function (){
         ->middleware(['auth'])->name('admin.index');
     Route::get('/register', function () {return view('admin.registration');})
         ->middleware(['auth'])->name('admin.register');
-    Route::get('/permissions', [Admin\PermissionController::class, 'show'])
+    Route::get('/permissions', [Admin\UserController::class, 'show'])
         ->middleware(['auth'])->name('admin.permissions');
-    Route::post('/permissions/edit', [Admin\PermissionController::class, 'edit'])
+    Route::post('/permissions/edit', [Admin\UserController::class, 'edit'])
         ->middleware(['auth'])->name('admin.permissions.edit');
 });
 
