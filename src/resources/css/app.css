@@ -8,18 +8,18 @@ body {
 
 .logo {
     border-radius: 15px;
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     height: 240px;
     width: 300px;
 }
 
 #main-input {
     background-color: rgb(219, 228, 241);
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
 }
 
 #main-submit{
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     background-color: #a7b7e0;
     font-family: "Times New Roman", Times, serif;
     letter-spacing: -1px;
@@ -27,7 +27,7 @@ body {
 
 #main-submit:hover{
     color: #a7b7e0;
-    background-color: #fff;
+    background-color: #ffffff;
     text-shadow: none;
     border-color: lightsteelblue;
 }

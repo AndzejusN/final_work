@@ -10,7 +10,7 @@
             <!-- Validation Errors -->
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('logged') }}">
                 @csrf
 
                 <div class="card shadow-2-strong" style="border-radius: 1rem;" id="main-input">

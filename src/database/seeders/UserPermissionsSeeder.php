@@ -21,7 +21,7 @@ class UserPermissionsSeeder extends Seeder
             'Head',
             'Purchase',
             'Sales',
-            'Not Confirmed',
+            'Not defined',
         ];
 
         foreach ($permissions as $permission) {

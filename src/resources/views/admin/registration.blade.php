@@ -7,7 +7,7 @@
             <!-- Validation Errors -->
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-            <form action="{{ route('register') }}" method="POST">
+            <form action="{{ route('registered') }}" method="POST">
                 @csrf
                 <div class="shadow-2-strong" style="border-radius: 1rem;" id="main-input">
                     <div class="p-3 inline-flex w-full">
@@ -30,6 +30,10 @@
                             <input type="password" id="password_confirmation" name="password_confirmation" class="form-control form-control-sm"
                                    placeholder="Repeat password" required/>
                             <label class="" for="password_confirmation" :value="__('Confirm Password')"></label>
+                        </div>
+                        <div class="w-50 px-3">
+                        </div>
+                        <div class="w-50 px-3">
                         </div>
                         <div class="w-25 mb-4 px-3">
                             <button class="btn btn-dark" type="submit" id="main-submit">A D D | U S E R</button>

@@ -19,9 +19,20 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('is_active')->default(FALSE);
+            $table->string('permission', 30)->default('Not defined');
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
+
+        Schema::table('users', function (Blueprint $table) {
+
+            $table->foreign('permission')->references('name')
+                ->on('user_permissions')->onDelete('restrict');
+
+        });
+
     }
 
     /**

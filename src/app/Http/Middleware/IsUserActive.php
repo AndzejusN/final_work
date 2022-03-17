@@ -16,7 +16,7 @@ class IsUserActive
      */
     public function handle(Request $request, Closure $next)
     {
-        // https://laravel.com/docs/9.x/authentication
+
         if ($user = $request->user()) {
             if (!$user->is_active) {
                 abort(403);
