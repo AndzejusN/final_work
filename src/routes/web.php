@@ -11,12 +11,14 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function (){
     Route::get('/index', function () {return view('admin.index');})
         ->middleware(['auth'])->name('admin.index');
-    Route::get('/register', function () {return view('admin.registration');})
+    Route::get('/register', [Admin\UserController::class,'create'])
         ->middleware(['auth'])->name('admin.register');
     Route::get('/permissions', [Admin\UserController::class, 'show'])
         ->middleware(['auth'])->name('admin.permissions');
-    Route::post('/permissions/edit', [Admin\UserController::class, 'edit'])
+    Route::patch('/permissions/edit/{id}', [Admin\UserController::class, 'edit'])
         ->middleware(['auth'])->name('admin.permissions.edit');
+    Route::delete('/permissions/delete', [Admin\UserController::class, 'delete'])
+        ->middleware(['auth'])->name('admin.permissions.delete');
 });
 
 

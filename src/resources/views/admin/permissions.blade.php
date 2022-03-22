@@ -10,20 +10,19 @@
                 <th>E-mail:</th>
                 <th>Permission:</th>
                 <th>Is active:</th>
-                <th>Change permission</th>
-                <th>Change is active</th>
                 <th></th>
             </tr>
             </thead>
-            <tbody>
+            <tbody style="font-weight:600">
             @foreach ($users as $user)
+                <form action="{{ route('admin.permissions.edit',['id' => $user->id]) }}" method="POST">
+                    @method('PATCH')
+                    @csrf
                 <tr>
                     <td>{{$user->name }}</td>
                     <td>{{$user->email }}</td>
-                    <td>{{$user->permission }}</td>
-                    <td>{{$user->is_active }}</td>
                     <td>
-                        <select id="{{$user->id}}" name="{{$user->id}}">
+                        <select id="permission" name="permission">
                             @foreach ($permissions as $permission)
                                 <option
                                     value="{{ $permission->name}}" {{ $permission->name == $user->permission ? 'selected' : '' }}>
@@ -33,9 +32,9 @@
                         </select>
                     </td>
                     <td>
-                        <select id="{{$user->id}}" name="{{$user->id}}">
-                            <option value="1" {{$user->is_active ? 'selected' : ''}}>FALSE</option>
-                            <option value="0" {{$user->is_active ? 'selected' : ''}}>TRUE</option>
+                        <select id="is_active" name="is_active">
+                            <option value="0" {{$user->is_active ? 'selected' : ''}}>FALSE</option>
+                            <option value="1" {{$user->is_active ? 'selected' : ''}}>TRUE</option>
                         </select>
                     </td>
                     <td>
@@ -44,6 +43,7 @@
                         </div>
                     </td>
                 </tr>
+                </form>
             @endforeach
             </tbody>
         </table>

@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Routes prefix used">
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Admin Permission table partly / some changes in registration  / Part 1 of 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/PermissionController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +225,10 @@
       <workItem from="1647256537091" duration="12695000" />
       <workItem from="1647333017630" duration="18800000" />
       <workItem from="1647415914108" duration="14648000" />
-      <workItem from="1647508232278" duration="10292000" />
+      <workItem from="1647508232278" duration="11105000" />
+      <workItem from="1647873298108" duration="7478000" />
+      <workItem from="1647932578781" duration="1061000" />
+      <workItem from="1647948178211" duration="5589000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -275,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647510175405</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Admin Permission table partly / some changes in registration  / Part 1 of 3">
+      <created>1647520035309</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647520035309</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +314,8 @@
     <MESSAGE value="Auth / Breeze 3" />
     <MESSAGE value="Auth / Breeze 4" />
     <MESSAGE value="Routes prefix used" />
-    <option name="LAST_COMMIT_MESSAGE" value="Routes prefix used" />
+    <MESSAGE value="Admin Permission table partly / some changes in registration  / Part 1 of 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Permission table partly / some changes in registration  / Part 1 of 3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

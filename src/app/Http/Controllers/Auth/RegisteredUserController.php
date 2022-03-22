@@ -44,11 +44,9 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'is_active' => $request->is_active,
+            'permission' => $request->permission
         ]);
-
-//        event(new Registered($user));
-//
-//        Auth::login($user);
 
         return redirect(RouteServiceProvider::ADMIN);
     }
