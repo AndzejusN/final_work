@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use phpDocumentor\Reflection\Types\Boolean;
 
 class RegisteredUserController extends Controller
 {
@@ -26,7 +27,7 @@ class RegisteredUserController extends Controller
     /**
      * Handle an incoming registration request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      *
      * @throws \Illuminate\Validation\ValidationException
@@ -38,6 +39,8 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'is_active' => ['required', 'integer'],
+            'permission' => ['required', 'exists:App\Models\Permission,name']
         ]);
 
         $user = User::create([
@@ -48,6 +51,6 @@ class RegisteredUserController extends Controller
             'permission' => $request->permission
         ]);
 
-        return redirect(RouteServiceProvider::ADMIN);
+        return redirect()->route('admin.register');
     }
 }

@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Admin Permission table partly / some changes in registration  / Part 1 of 3">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Change permissions -&gt; users // admin permissions panel">
+      <change afterPath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/views/layouts/back.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/views/layouts/pagination.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/main.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +173,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/public/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/views/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -176,11 +184,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views\admin" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\public\img" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\storage\framework" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Requests\Auth" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Middleware" />
-      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Controllers\Auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views\admin" />
@@ -228,7 +236,13 @@
       <workItem from="1647508232278" duration="11105000" />
       <workItem from="1647873298108" duration="7478000" />
       <workItem from="1647932578781" duration="1061000" />
-      <workItem from="1647948178211" duration="5589000" />
+      <workItem from="1647948178211" duration="10043000" />
+      <workItem from="1647983958723" duration="2787000" />
+      <workItem from="1648019569600" duration="4792000" />
+      <workItem from="1648063076870" duration="1283000" />
+      <workItem from="1648224009441" duration="3192000" />
+      <workItem from="1648227694376" duration="110000" />
+      <workItem from="1648386558918" duration="11593000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -286,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647520035309</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Change permissions -&gt; users // admin permissions panel">
+      <created>1647954176290</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1647954176291</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +336,8 @@
     <MESSAGE value="Auth / Breeze 4" />
     <MESSAGE value="Routes prefix used" />
     <MESSAGE value="Admin Permission table partly / some changes in registration  / Part 1 of 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Permission table partly / some changes in registration  / Part 1 of 3" />
+    <MESSAGE value="Change permissions -&gt; users // admin permissions panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change permissions -&gt; users // admin permissions panel" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

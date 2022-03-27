@@ -5,15 +5,19 @@
     <div class="row d-flex justify-content-center align-items-center h-50 py-12">
 
         <a class="btn btn-dark w-75" role="button" id="main-submit" href="{{ route('admin.register') }}">
-            U S E R S &ensp; A C C O U N T &ensp; A D M I N I S T R A T I O N
+           A D D &ensp; U S E R
         </a>
 
         <a class="btn btn-dark w-75" role="button" id="main-submit" href="{{route('admin.permissions')}}">
-            P E R M I S S I O N S &ensp; P A N E L
+          U S E R &ensp; P E R M I S S I O N S
+        </a>
+
+        <a class="btn btn-dark w-75" role="button" id="main-submit" href="{{route('admin.deregistration.index')}}">
+           D E L E T E &ensp; U S E R
         </a>
 
         <a class="btn btn-dark w-75" role="button" id="main-submit" href="{{route('workplace')}}">
-            I N Q U I R I E S &ensp; P A N E L
+            I N Q U I R I E S &ensp; W O R K P L A C E
         </a>
 
         <form method="POST" action="{{ route('logout') }}"
