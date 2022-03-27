@@ -34,7 +34,9 @@
             @endforeach
             </tbody>
         </table>
-        @include('layouts.pagination')
+        <div class="d-flex justify-content-center">
+            {!! $users->links() !!}
+        </div>
         @include('layouts.back')
     </div>
 

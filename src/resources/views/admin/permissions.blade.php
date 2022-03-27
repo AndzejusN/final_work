@@ -47,7 +47,6 @@
             @endforeach
             </tbody>
         </table>
-        @include('layouts.pagination')
         @include('layouts.back')
     </div>
 

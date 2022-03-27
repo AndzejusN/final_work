@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Change permissions -&gt; users // admin permissions panel">
-      <change afterPath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/layouts/back.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/layouts/pagination.blade.php" afterDir="false" />
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Components added - Pagination / Back links 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/pagination.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +230,7 @@
       <workItem from="1648063076870" duration="1283000" />
       <workItem from="1648224009441" duration="3192000" />
       <workItem from="1648227694376" duration="110000" />
-      <workItem from="1648386558918" duration="11593000" />
+      <workItem from="1648386558918" duration="12518000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -307,7 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647954176291</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Components added - Pagination / Back links">
+      <created>1648399194094</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648399194094</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Components added - Pagination / Back links 2">
+      <created>1648399210527</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648399210527</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +339,10 @@
     <MESSAGE value="Routes prefix used" />
     <MESSAGE value="Admin Permission table partly / some changes in registration  / Part 1 of 3" />
     <MESSAGE value="Change permissions -&gt; users // admin permissions panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change permissions -&gt; users // admin permissions panel" />
+    <MESSAGE value="Components added - Paggination / Back links" />
+    <MESSAGE value="Components added - Pagination / Back links" />
+    <MESSAGE value="Components added - Pagination / Back links 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Components added - Pagination / Back links 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
