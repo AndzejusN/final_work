@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Components added - Pagination / Back links 3">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Components added - Pagination / Back links 4">
+      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/views/layouts/inquiry.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/Priority.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Priority.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/ProductFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2021_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2021_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +176,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -170,13 +187,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views\admin" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\public\img" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\storage\framework" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Requests\Auth" />
-      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Middleware" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views\workplace" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views\admin" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\public\img\logo" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views" />
@@ -228,7 +246,10 @@
       <workItem from="1648063076870" duration="1283000" />
       <workItem from="1648224009441" duration="3192000" />
       <workItem from="1648227694376" duration="110000" />
-      <workItem from="1648386558918" duration="12590000" />
+      <workItem from="1648386558918" duration="31034000" />
+      <workItem from="1648552962286" duration="4141000" />
+      <workItem from="1648561605481" duration="869000" />
+      <workItem from="1648565350301" duration="463000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -314,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648401321929</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Components added - Pagination / Back links 4">
+      <created>1648401395115</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1648401395115</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +376,8 @@
     <MESSAGE value="Components added - Pagination / Back links" />
     <MESSAGE value="Components added - Pagination / Back links 2" />
     <MESSAGE value="Components added - Pagination / Back links 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Components added - Pagination / Back links 3" />
+    <MESSAGE value="Components added - Pagination / Back links 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Components added - Pagination / Back links 4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

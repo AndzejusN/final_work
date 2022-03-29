@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin;
+use App\Http\Controllers\Inquiries;
 use Illuminate\Http\Request;
 
 Route::view('/', 'index');
@@ -22,6 +23,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
     });
 });
 
-Route::view('/workplace', 'workplace')->middleware(['auth'])->name('workplace');
+Route::get('/workplace', [Inquiries\InquiryController::class,'index'])->middleware(['auth'])->name('workplace');
+Route::post('/workplace/create', [Inquiries\InquiryController::class,'create'])->middleware(['auth'])->name('workplace.create');
+Route::get('/workplace/products', [Inquiries\InquiryController::class,'inquiry'])->middleware(['auth'])->name('workplace.products');
 
 require __DIR__ . '/auth.php';

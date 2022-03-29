@@ -11,9 +11,20 @@ class Product extends Model
 
     protected $table = 'products';
 
+    protected $fillable = [
+        'name',
+        'model',
+        'description',
+        'measure',
+        'quantity',
+        'price',
+        'delivery_term'
+    ];
+
+
     public function measure()
     {
-        return $this->belongsTo(Measure::class, 'name','measure');
+        return $this->belongsTo(Measure::class, 'name', 'measure');
     }
 
 }

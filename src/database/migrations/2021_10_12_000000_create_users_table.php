@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->boolean('is_active')->default(FALSE);
+            $table->boolean('is_active')->default(TRUE);
             $table->string('permission', 30)->default('Not defined');
             $table->rememberToken();
             $table->timestamps();

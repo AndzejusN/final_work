@@ -20,8 +20,9 @@ return new class extends Migration
             $table->string('description',255);
             $table->string('measure',30);
             $table->decimal('quantity', 9, 3)->unsigned();
-            $table->decimal('price', 8, 2)->unsigned();
-            $table->integer('delivery_term')->unsigned();
+            $table->decimal('price', 8, 2)->unsigned()->nullable();
+            $table->integer('delivery_term')->unsigned()->nullable();
+            $table->string('conditions',255);
             $table->timestamps();
             $table->softDeletes();
 

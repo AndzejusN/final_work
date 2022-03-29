@@ -12,7 +12,7 @@ class UserController extends Controller
 
     public function show()
     {
-        $users = Models\User::orderBy('name')->with('permission')->get();
+        $users = Models\User::orderBy('name')->with('permission')->paginate(5);
         $permissions = Models\Permission::with('user')->get();
 
         return view('admin.permissions', compact('users', 'permissions'));
@@ -38,7 +38,7 @@ class UserController extends Controller
 
     public function registration()
     {
-        $users = Models\User::paginate(10);
+        $users = Models\User::paginate(5);
 
         return view('admin.deregistration', compact('users'));
     }
