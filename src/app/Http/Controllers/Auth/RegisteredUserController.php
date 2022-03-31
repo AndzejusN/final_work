@@ -51,6 +51,12 @@ class RegisteredUserController extends Controller
             'permission' => $request->permission
         ]);
 
-        return redirect()->route('admin.register');
+        if ($user) {
+            $response = ['positive' => 'User successfully registered'];
+        } else {
+            $response = ['negative' => 'Error, user was not registered'];
+        }
+
+        return redirect()->route('admin.register')->with($response);
     }
 }

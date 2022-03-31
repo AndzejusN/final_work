@@ -15,7 +15,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('workplace') }}">
-                        <img class="logo" src="storage/img/logo/logo_just_sand.png" style=" height: 37px;width: 200px;"
+                        <img class="logo" src="{{asset('storage/img/logo/logo_just_sand.png')}}" style=" height: 37px;width: 200px;"
                              alt="SAND LOGO"/>
                     </a>
                 </div>

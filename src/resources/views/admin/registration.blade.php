@@ -2,7 +2,21 @@
 
 @section('content')
     <div class="d-flex py-3 h-50 justify-content-center align-items-center">
+
         <div class="col-12 col-md-8 col-lg-6 col-xl-5 w-100 mb-6">
+            <div class="d-flex justify-content-center align-items-center w-full">
+                    @if(Session::has('negative'))
+                        <div class="alert alert-danger w-50">
+                            {{ Session::get('negative')}}
+                        </div>
+                    @endif
+
+                    @if(Session::has('positive'))
+                        <div class="alert alert-success w-50 text-center">
+                            {{ Session::get('positive')}}
+                        </div>
+                    @endif
+            </div>
             <!-- Validation Errors -->
             <x-auth-validation-errors class="mb-4" :errors="$errors"/>
 

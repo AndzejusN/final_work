@@ -20,12 +20,18 @@ class UserController extends Controller
 
     public function edit(Request $request, $id)
     {
-        Models\User::where('id', $id)->update([
+        $check = Models\User::where('id', $id)->update([
             'permission' => $request->permission,
             'is_active' => $request->is_active
         ]);
 
-        return redirect()->route('admin.permissions');
+        if ($check) {
+            $response = ['positive' => 'Permissions successfully changed'];
+        } else {
+            $response = ['negative' => 'Error, permissions was not changed'];
+        }
+
+        return redirect()->route('admin.permissions')->with($response);
     }
 
     public function create()
@@ -45,8 +51,14 @@ class UserController extends Controller
 
     public function delete($id)
     {
-        Models\User::where('id', $id)->delete();
+        $check = Models\User::where('id', $id)->delete();
 
-        return redirect()->route('admin.deregistration.index');
+        if ($check) {
+            $response = ['positive' => 'User successfully deleted'];
+        } else {
+            $response = ['negative' => 'Error, user was not deleted'];
+        }
+
+        return redirect()->route('admin.deregistration.index')->with($response);
     }
 }

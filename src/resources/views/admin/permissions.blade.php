@@ -2,6 +2,20 @@
 
 @section('content')
 
+    <div class="d-flex justify-content-center align-items-center w-full mt-4">
+        @if(Session::has('negative'))
+            <div class="alert alert-danger w-50">
+                {{ Session::get('negative')}}
+            </div>
+        @endif
+
+        @if(Session::has('positive'))
+            <div class="alert alert-success w-50 text-center">
+                {{ Session::get('positive')}}
+            </div>
+        @endif
+    </div>
+
     <div class="my-5 text-center">
         <table class="table">
             <thead>
