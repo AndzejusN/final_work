@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="3 User types added per seeding (Admin/Sales/Purchase) / Admin panel pagination added">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Response for user create/change/delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/factories/InquiryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/InquiryFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/ProductFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093530_create_inquiries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093418_create_inquiries_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" afterDir="false" />
@@ -243,6 +247,8 @@
       <workItem from="1648653668443" duration="3152000" />
       <workItem from="1648657400498" duration="2519000" />
       <workItem from="1648660253478" duration="15747000" />
+      <workItem from="1648740787529" duration="1867000" />
+      <workItem from="1648796185954" duration="22044000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -342,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648565908954</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Response for user create/change/delete">
+      <created>1648740847154</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1648740847154</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +391,8 @@
     <MESSAGE value="Components added - Pagination / Back links 3" />
     <MESSAGE value="Components added - Pagination / Back links 4" />
     <MESSAGE value="3 User types added per seeding (Admin/Sales/Purchase) / Admin panel pagination added" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 User types added per seeding (Admin/Sales/Purchase) / Admin panel pagination added" />
+    <MESSAGE value="Response for user create/change/delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Response for user create/change/delete" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

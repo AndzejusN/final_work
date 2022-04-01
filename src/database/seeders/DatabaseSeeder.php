@@ -27,7 +27,6 @@ class DatabaseSeeder extends Seeder
             PrioritiesSeeder::class
         ]);
 
-        Models\User::factory(10)->create();
         Models\User::factory()->state(new Sequence(
             [
                 'name' => 'Admin',
@@ -55,9 +54,9 @@ class DatabaseSeeder extends Seeder
             ]
         ))->count(3)->create();
 
-
+        Models\Inquiry::factory(10)->create();
         Models\Product::factory(10)->create();
         Models\File::factory(10)->create();
-        Models\Inquiry::factory(10)->create();
+
     }
 }

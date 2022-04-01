@@ -18,13 +18,15 @@ class Product extends Model
         'measure',
         'quantity',
         'price',
-        'delivery_term'
+        'delivery_term',
+        'conditions',
+        'inquiry_id'
     ];
 
 
     public function measure()
     {
-        return $this->belongsTo(Measure::class, 'name', 'measure');
+        return $this->belongsTo(Measure::class, 'measure', 'name');
     }
 
 }

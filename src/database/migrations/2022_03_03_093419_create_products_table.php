@@ -15,14 +15,15 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name',255);
-            $table->string('model',255);
+            $table->string('name',100);
+            $table->string('model',100);
             $table->string('description',255);
             $table->string('measure',30);
-            $table->decimal('quantity', 9, 3)->unsigned();
+            $table->decimal('quantity', 10, 3)->unsigned();
             $table->decimal('price', 8, 2)->unsigned()->nullable();
             $table->integer('delivery_term')->unsigned()->nullable();
-            $table->string('conditions',255);
+            $table->string('conditions',255)->nullable();
+            $table->bigInteger('inquiry_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
 
@@ -32,6 +33,8 @@ return new class extends Migration
 
             $table->foreign('measure')->references('name')
                 ->on('product_measures')->onDelete('restrict');
+            $table->foreign('inquiry_id')->references('id')
+                ->on('inquiries')->onDelete('restrict');
 
         });
     }

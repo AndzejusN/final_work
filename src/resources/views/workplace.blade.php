@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            <div class="text-start">
+            <div class="text-end">
                 <a class="btn btn-dark w-25" role="button" id="main-submit" href="{{ route('workplace.products') }}">
                     A D D | I N Q U I R Y
                 </a>

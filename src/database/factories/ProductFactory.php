@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\File;
-use App\Models\Measure;
+use App\Models;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,11 +22,12 @@ class ProductFactory extends Factory
             'name' => $this->faker->words(1, TRUE),
             'model' => $this->faker->words(1, TRUE),
             'description' => $this->faker->text(30),
-            'measure' => optional(Measure::inRandomOrder()->first())->name,
+            'measure' => optional(Models\Measure::inRandomOrder()->first())->name,
             'quantity' => $this->faker->randomDigit(),
             'price' => $this->faker->numberBetween(1, 1000),
             'delivery_term' => $this->faker->numberBetween(1, 10),
             'conditions' => $this->faker->text(30),
+            'inquiry_id' => optional(Models\Inquiry::inRandomOrder()->first())->id
         ];
     }
 }

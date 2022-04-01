@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers\Inquiries;
 
+
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Models;
 use Illuminate\Http\Request;
-use App\Models\Inquiry;
+use Illuminate\Support\Facades\Auth;
+
 
 class InquiryController extends Controller
 {
 
     public function index()
     {
-        $inquiries = Inquiry::get();
+        $inquiries = Models\Inquiry::get();
 
         return view('workplace', compact('inquiries'));
 
@@ -20,8 +23,9 @@ class InquiryController extends Controller
 
     public function inquiry()
     {
+        $measures = Models\Measure::get();
 
-        return view('workplace.products');
+        return view('workplace.products', compact('measures'));
     }
 
 
@@ -32,14 +36,19 @@ class InquiryController extends Controller
     }
 
 
-    public function create(Request $request)
+    public function create(Requests\Inquiry\InquiryCreateRequest $request)
     {
-        $product = Product::create([
-            'name' => $request->name,
-            'model' => $request->model,
-            'description' => $request->description,
-            'measure' => $request->measure,
-            'quantity' => $request->quantity
-        ]);
+        $inquiry = new Models\Inquiry;
+        $inquiry->user_id = Auth::user()->id;
+        $inquiry->save();
+
+        $last_inquiry_id = $inquiry->id;
+
+        $validated = $request->validated();
+        $validated['inquiry_id'] = $last_inquiry_id;
+
+        $product = Models\Product::create($validated);
+
+        return redirect()->route('workplace.products', $product->id);
     }
 }

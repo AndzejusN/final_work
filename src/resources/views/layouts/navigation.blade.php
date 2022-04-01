@@ -15,7 +15,8 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('workplace') }}">
-                        <img class="logo" src="{{asset('storage/img/logo/logo_just_sand.png')}}" style=" height: 37px;width: 200px;"
+                        <img class="logo" src="{{asset('storage/img/logo/logo_just_sand.png')}}"
+                             style=" height: 37px;width: 200px;"
                              alt="SAND LOGO"/>
                     </a>
                 </div>
@@ -24,6 +25,11 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('workplace')" :active="request()->routeIs('workplace')">
                         {{ __('Inquiries list') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('workplace.products')" :active="request()->routeIs('workplace.products')">
+                        {{ __('Products list') }}
                     </x-nav-link>
                 </div>
             </div>
