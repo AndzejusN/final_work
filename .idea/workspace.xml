@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Response for user create/change/delete">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Add product by user_id/inquiry_id page added / hardly goes ...">
+      <change afterPath="$PROJECT_DIR$/src/app/Http/Requests/Inquiry/InquiryCreateRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Product.php" afterDir="false" />
@@ -248,7 +249,7 @@
       <workItem from="1648657400498" duration="2519000" />
       <workItem from="1648660253478" duration="15747000" />
       <workItem from="1648740787529" duration="1867000" />
-      <workItem from="1648796185954" duration="22044000" />
+      <workItem from="1648796185954" duration="22162000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -355,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648740847154</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add product by user_id/inquiry_id page added / hardly goes ...">
+      <created>1648828584859</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1648828584859</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +400,8 @@
     <MESSAGE value="Components added - Pagination / Back links 4" />
     <MESSAGE value="3 User types added per seeding (Admin/Sales/Purchase) / Admin panel pagination added" />
     <MESSAGE value="Response for user create/change/delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Response for user create/change/delete" />
+    <MESSAGE value="Add product by user_id/inquiry_id page added / hardly goes ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add product by user_id/inquiry_id page added / hardly goes ..." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
