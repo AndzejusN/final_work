@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Add product by user_id/inquiry_id page added / hardly goes ...">
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Requests/Inquiry/InquiryCreateRequest.php" afterDir="false" />
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Add product by user_id/inquiry_id page added / hardly goes 2 ...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/Inquiry.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Inquiry.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/factories/InquiryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/InquiryFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/ProductFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093530_create_inquiries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093418_create_inquiries_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093418_create_inquiries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093418_create_inquiries_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +245,10 @@
       <workItem from="1648657400498" duration="2519000" />
       <workItem from="1648660253478" duration="15747000" />
       <workItem from="1648740787529" duration="1867000" />
-      <workItem from="1648796185954" duration="22162000" />
+      <workItem from="1648796185954" duration="22224000" />
+      <workItem from="1648892983831" duration="9099000" />
+      <workItem from="1648995158799" duration="909000" />
+      <workItem from="1648996089394" duration="15285000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -363,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648828584859</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add product by user_id/inquiry_id page added / hardly goes 2 ...">
+      <created>1648828613349</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1648828613349</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +407,8 @@
     <MESSAGE value="3 User types added per seeding (Admin/Sales/Purchase) / Admin panel pagination added" />
     <MESSAGE value="Response for user create/change/delete" />
     <MESSAGE value="Add product by user_id/inquiry_id page added / hardly goes ..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add product by user_id/inquiry_id page added / hardly goes ..." />
+    <MESSAGE value="Add product by user_id/inquiry_id page added / hardly goes 2 ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add product by user_id/inquiry_id page added / hardly goes 2 ..." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -15,7 +15,7 @@ class Inquiry extends Model
 
     public function state()
     {
-        return $this->belongsTo(InquiryState::class, 'name','inquiry_state');
+        return $this->belongsTo(InquiryState::class, 'name', 'inquiry_state');
     }
 
 }
