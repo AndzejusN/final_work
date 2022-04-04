@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Inquiry page / Add product / Delete products / TODO SEND INQUIRY">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Inquiries list page" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -244,7 +238,7 @@
       <workItem from="1648892983831" duration="9099000" />
       <workItem from="1648995158799" duration="909000" />
       <workItem from="1648996089394" duration="15450000" />
-      <workItem from="1649062412807" duration="7291000" />
+      <workItem from="1649062412807" duration="7376000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -372,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649025409908</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Inquiries list page">
+      <created>1649080685289</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1649080685289</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +413,8 @@
     <MESSAGE value="Add product by user_id/inquiry_id page added / hardly goes ..." />
     <MESSAGE value="Add product by user_id/inquiry_id page added / hardly goes 2 ..." />
     <MESSAGE value="Inquiry page / Add product / Delete products / TODO SEND INQUIRY" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inquiry page / Add product / Delete products / TODO SEND INQUIRY" />
+    <MESSAGE value="Inquiries list page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inquiries list page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
