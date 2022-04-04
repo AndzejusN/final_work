@@ -23,7 +23,8 @@ return new class extends Migration
             $table->decimal('price', 8, 2)->unsigned()->nullable();
             $table->integer('delivery_term')->unsigned()->nullable();
             $table->string('conditions',255)->nullable();
-            $table->bigInteger('inquiry_id')->unsigned();
+            $table->bigInteger('inquiry_id')->unsigned()->nullable();
+            $table->bigInteger('user_id')->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
 

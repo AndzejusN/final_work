@@ -13,71 +13,25 @@ class InquiryController extends Controller
 
     public function index()
     {
-        $inquiries = Models\Inquiry::select('inquiry_mark','user_id')->distinct()->get();
+        $inquiries = Models\Inquiry::select('id', 'user_id')
+            ->distinct()
+            ->orderBy('id', 'DESC')
+            ->get();
 
         return view('workplace', compact('inquiries'));
 
     }
 
-    public function inquiry()
-    {
-        $measures = Models\Measure::get();
-
-        return view('workplace.products', compact('measures'));
-    }
-
-    public function delete(Request $request)
-    {
-        $id = $request->id;
-        $product = Models\Product::where('id', $id);
-        $product->delete();
-
-        $session = $request->session()->getId();
-
-        $measures = Models\Measure::get();
-
-        $inquiries = Models\Inquiry::where('inquiry_mark', $session)->get();
-
-        $products = Models\Product::whereIn('inquiry_id', $inquiries->pluck('id'))->get();
-
-        return view('workplace.products', compact('products', 'measures'));
-    }
-
-
-    public function store(Request $request)
-    {
-        $session = $request->session()->regenerate();
-
-        $measures = Models\Measure::get();
-
-        $inquiries = Models\Inquiry::where('inquiry_mark', $session)->get();
-
-        $products = Models\Product::whereIn('inquiry_id', $inquiries->pluck('id'))->get();
-
-        return view('workplace.products', compact('products', 'measures'));
-
-    }
-
-
-    public function create(Requests\Inquiry\InquiryCreateRequest $request)
+    public function create(Request $request)
     {
         $inquiry = new Models\Inquiry;
         $inquiry->user_id = Auth::user()->id;
-        $session = $inquiry->inquiry_mark = $request->session()->getId();
         $inquiry->save();
 
-        $last_inquiry_id = $inquiry->id;
-        $validated = $request->validated();
-        $validated['inquiry_id'] = $last_inquiry_id;
-
-        Models\Product::create($validated);
+        Models\Product::whereNull('inquiry_id')->update(['inquiry_id' => $inquiry->id]);
 
         $measures = Models\Measure::get();
 
-        $inquiries = Models\Inquiry::where('inquiry_mark', $session)->get();
-
-        $products = Models\Product::whereIn('inquiry_id', $inquiries->pluck('id'))->get();
-
-        return view('workplace.products', compact('products', 'measures'));
+        return view('workplace.products', compact('measures'));
     }
 }

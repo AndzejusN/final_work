@@ -15,7 +15,6 @@ return new class extends Migration {
         Schema::create('inquiries', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
-            $table->string('inquiry_mark')->default(NULL);
             $table->string('inquiry_state', 30)->default('Empty');
             $table->timestamps();
             $table->softDeletes();

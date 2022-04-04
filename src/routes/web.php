@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Inquiries;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Products;
 
 Route::view('/', 'index');
 
@@ -24,9 +24,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
 });
 
 Route::get('/workplace', [Inquiries\InquiryController::class,'index'])->middleware(['auth'])->name('workplace');
-Route::post('/workplace/create', [Inquiries\InquiryController::class,'create'])->middleware(['auth'])->name('workplace.create');
-Route::delete('/workplace/delete', [Inquiries\InquiryController::class,'delete'])->middleware(['auth'])->name('workplace.delete');
-Route::get('/workplace/products', [Inquiries\InquiryController::class,'inquiry'])->middleware(['auth'])->name('workplace.products');
-Route::get('/workplace/checkout', [Inquiries\InquiryController::class,'store'])->middleware(['auth'])->name('workplace.checkout');
+Route::post('/workplace/create', [Products\ProductController::class,'create'])->middleware(['auth'])->name('workplace.create');
+Route::delete('/workplace/delete', [Products\ProductController::class,'delete'])->middleware(['auth'])->name('workplace.delete');
+Route::get('/workplace/products', [Products\ProductController::class,'index'])->middleware(['auth'])->name('workplace.products');
+Route::get('/workplace/checkout', [Inquiries\InquiryController::class,'create'])->middleware(['auth'])->name('workplace.checkout');
 
 require __DIR__ . '/auth.php';

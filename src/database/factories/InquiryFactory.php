@@ -22,7 +22,6 @@ class InquiryFactory extends Factory
         return [
             'user_id' => optional(User::inRandomOrder()->first())->id,
             'inquiry_state' => optional(InquiryState::inRandomOrder()->first())->name,
-            'inquiry_mark' => $this->faker->numberBetween(100000, 1000000),
         ];
     }
 }

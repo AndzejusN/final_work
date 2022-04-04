@@ -25,7 +25,7 @@
                                                     <div class="w-auto my-2"> {{$inquiry->user_id}}</div>
                                                 </td>
                                                 <td>
-                                                    <div class="w-auto my-2"> {{$inquiry->inquiry_mark}}</div>
+                                                    <div class="w-auto my-2"> {{$inquiry->id}}</div>
                                                 </td>
                                             </tr>
                                             </tbody>

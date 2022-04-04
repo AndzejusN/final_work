@@ -20,7 +20,8 @@ class Product extends Model
         'price',
         'delivery_term',
         'conditions',
-        'inquiry_id'
+        'inquiry_id',
+        'user_id'
     ];
 
 
