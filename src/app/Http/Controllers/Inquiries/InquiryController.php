@@ -13,7 +13,7 @@ class InquiryController extends Controller
 
     public function index()
     {
-        $inquiries = Models\Inquiry::get();
+        $inquiries = Models\Inquiry::select('inquiry_mark','user_id')->distinct()->get();
 
         return view('workplace', compact('inquiries'));
 
@@ -46,7 +46,15 @@ class InquiryController extends Controller
 
     public function store(Request $request)
     {
+        $session = $request->session()->regenerate();
 
+        $measures = Models\Measure::get();
+
+        $inquiries = Models\Inquiry::where('inquiry_mark', $session)->get();
+
+        $products = Models\Product::whereIn('inquiry_id', $inquiries->pluck('id'))->get();
+
+        return view('workplace.products', compact('products', 'measures'));
 
     }
 

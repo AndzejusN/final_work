@@ -27,5 +27,6 @@ Route::get('/workplace', [Inquiries\InquiryController::class,'index'])->middlewa
 Route::post('/workplace/create', [Inquiries\InquiryController::class,'create'])->middleware(['auth'])->name('workplace.create');
 Route::delete('/workplace/delete', [Inquiries\InquiryController::class,'delete'])->middleware(['auth'])->name('workplace.delete');
 Route::get('/workplace/products', [Inquiries\InquiryController::class,'inquiry'])->middleware(['auth'])->name('workplace.products');
+Route::get('/workplace/checkout', [Inquiries\InquiryController::class,'store'])->middleware(['auth'])->name('workplace.checkout');
 
 require __DIR__ . '/auth.php';
