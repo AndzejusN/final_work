@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Inquiries list till one TODO:visualization/editing">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Inquiries list visualization 50 perc.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" afterDir="false" />
     </list>
@@ -245,7 +245,7 @@
       <workItem from="1649062412807" duration="10061000" />
       <workItem from="1649090384948" duration="11608000" />
       <workItem from="1649138488027" duration="12591000" />
-      <workItem from="1649181100952" duration="2851000" />
+      <workItem from="1649181100952" duration="6234000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -408,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649181254364</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Inquiries list visualization 50 perc.">
+      <created>1649184017455</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649184017455</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +458,8 @@
     <MESSAGE value="Inquiries list page" />
     <MESSAGE value="Products controller added" />
     <MESSAGE value="Inquiries list till one TODO:visualization/editing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inquiries list till one TODO:visualization/editing" />
+    <MESSAGE value="Inquiries list visualization 50 perc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Inquiries list visualization 50 perc." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
