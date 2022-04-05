@@ -13,10 +13,10 @@ class InquiryController extends Controller
 
     public function index()
     {
-        $inquiries = Models\Inquiry::select('id', 'user_id')
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
             ->distinct()
             ->orderBy('id', 'DESC')
-            ->get();
+            ->paginate(10);
 
         return view('workplace', compact('inquiries'));
 
@@ -33,5 +33,17 @@ class InquiryController extends Controller
         $measures = Models\Measure::get();
 
         return view('workplace.products', compact('measures'));
+    }
+
+    public function show($id)
+    {
+        $products = Models\Product::where('inquiry_id', $id)->get();
+
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+            ->distinct()
+            ->orderBy('id', 'DESC')
+            ->paginate(10);
+
+        return view('workplace', compact('inquiries', 'products'));
     }
 }

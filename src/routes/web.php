@@ -25,8 +25,10 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
 
 Route::get('/workplace', [Inquiries\InquiryController::class,'index'])->middleware(['auth'])->name('workplace');
 Route::post('/workplace/create', [Products\ProductController::class,'create'])->middleware(['auth'])->name('workplace.create');
-Route::delete('/workplace/delete', [Products\ProductController::class,'delete'])->middleware(['auth'])->name('workplace.delete');
+Route::delete('/workplace/delete/{id}', [Products\ProductController::class,'delete'])->middleware(['auth'])->name('workplace.delete');
 Route::get('/workplace/products', [Products\ProductController::class,'index'])->middleware(['auth'])->name('workplace.products');
 Route::get('/workplace/checkout', [Inquiries\InquiryController::class,'create'])->middleware(['auth'])->name('workplace.checkout');
+Route::get('/workplace/show/{id}', [Inquiries\InquiryController::class,'show'])->middleware(['auth'])->name('workplace.show');
+
 
 require __DIR__ . '/auth.php';

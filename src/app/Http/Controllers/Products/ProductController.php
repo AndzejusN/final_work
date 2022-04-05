@@ -17,10 +17,10 @@ class ProductController extends Controller
         return view('workplace.products', compact('measures'));
     }
 
-    public function delete(Request $request)
+    public function delete($id)
     {
 
-        $product = Models\Product::where('id', $request->id);
+        $product = Models\Product::where('id', $id);
 
         $product->delete();
 

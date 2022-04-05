@@ -64,13 +64,14 @@
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             @if(isset($products))
                                 @foreach($products as $product)
-                                    <form action="{{route('workplace.delete')}}" class="card-body p-3 text-center"
+                                    <form action="{{ route('workplace.delete', ['id' => $product->id]) }}"
+                                          class="card-body p-3 text-center"
                                           method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <div class="d-flex row justify-content-between" style="border-radius: 1rem;"
                                              id="main-input">
-                                            <input class="number" hidden value="{{$product->id}}" name="id" id="id">
+                                            <input type="number" hidden value="{{$product->id}}" name="id" id="id">
                                             <div class="w-auto my-2"> {{$product->name}}</div>
                                             <div class="w-auto my-2"> {{$product->measure}}</div>
                                             <div class="w-auto my-2"> {{$product->quantity}}</div>
