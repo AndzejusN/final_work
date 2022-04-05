@@ -53,11 +53,71 @@
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             @if(isset($products))
                                 @foreach($products as $product)
-                                    <p> {{ $product->name }}</p>
-                                    <p> {{ $product->model }}</p>
-                                    <p> {{ $product->description }}</p>
-                                    <p> {{ $product->measure }}</p>
-                                    <p> {{ $product->quantity }}</p>
+                                    <form method="POST" action="#">
+                                        @csrf
+                                        <div class="card shadow-2-strong" style="border-radius: 1rem;" id="main-input">
+                                            <div class="card-body p-3 text-start">
+                                                <div class="form-outline py-1">
+                                                    <label class="form-label" for="name">Name:</label>
+                                                    <input type="text" name="name" id="name"
+                                                           class="form-control form-control-sm"
+                                                           placeholder="{{ $product->name }}" readonly/>
+                                                </div>
+                                                <div class="form-outline py-1">
+                                                    <label class="form-label" for="model">Model:</label>
+                                                    <input type="text" name="model" id="model"
+                                                           class="form-control form-control-sm"
+                                                           placeholder="{{$product->model}}" readonly/>
+                                                </div>
+                                                <div class="form-outline py-1">
+                                                    <label for="description">Product description:</label>
+                                                    <textarea class="form-control" style="min-width: 100%"
+                                                              id="description"
+                                                              name="description"
+                                                              readonly>{{ $product->description }}</textarea>
+                                                </div>
+                                                <div class="form-outline py-1">
+                                                    <label class="form-label" for="measure">Measurement:</label>
+                                                    <input type="text" name="measure" id="measure"
+                                                           class="form-control form-control-sm"
+                                                           placeholder="{{$product->measure}}" readonly/>
+                                                </div>
+                                                <div class="form-outline py-1">
+                                                    <label class="form-label" for="quantity">Quantity:</label>
+                                                    <input type="number" name="quantity" id="quantity"
+                                                           class="form-control form-control-sm"
+                                                           placeholder="{{ $product->quantity }}" readonly/>
+                                                </div>
+
+                                                <div class="form-outline py-1">
+                                                    <label class="form-label" for="price"
+                                                           :value="__('Price')">Price:</label>
+                                                    <input type="number" name="price" id="price"
+                                                           class="form-control form-control-sm" :value="old('price')"
+                                                           required autofocus/>
+                                                </div>
+                                                <div class="form-outline py-1">
+                                                    <label class="form-label" for="delivery_term"
+                                                           :value="__('Delivery_term')">Delivery term:</label>
+                                                    <input type="number" name="delivery_term" id="delivery_term"
+                                                           class="form-control form-control-sm" :value="old('delivery_term')"
+                                                           required autofocus/>
+                                                </div>
+                                                <div class="form-outline py-1">
+                                                    <label for="conditions" :value="__('Conditions')">Conditions:</label>
+                                                    <textarea class="form-control" style="min-width: 100%" id="description"
+                                                              name="conditions" :value="old('conditions')"></textarea>
+                                                </div>
+
+                                                <div class="text-center pt-4">
+                                                    <button style="min-width: 100%" class="btn btn-dark text-center"
+                                                            type="submit" id="main-submit">
+                                                        M A K E | O F F E R
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 @endforeach
                             @endif
                         </div>
