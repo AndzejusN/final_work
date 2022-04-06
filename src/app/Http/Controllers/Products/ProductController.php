@@ -75,7 +75,7 @@ class ProductController extends Controller
             ->where('inquiry_state', 'Empty')
             ->paginate(7);
 
-        $products = Models\Product::where('inquiry_id', $id)
+        $products = Models\Product::where('inquiry_id', $inquiry_id)
             ->where('filled', 0)
             ->get();
 
