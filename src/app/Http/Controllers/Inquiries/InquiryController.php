@@ -16,7 +16,8 @@ class InquiryController extends Controller
         $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
             ->distinct()
             ->orderBy('id', 'DESC')
-            ->paginate(10);
+            ->where('inquiry_state','Empty')
+            ->paginate(6);
 
         return view('workplace', compact('inquiries'));
 
@@ -44,7 +45,8 @@ class InquiryController extends Controller
         $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
             ->distinct()
             ->orderBy('id', 'DESC')
-            ->paginate(10);
+            ->where('inquiry_state','Empty')
+            ->paginate(7);
 
         return view('workplace', compact('inquiries', 'products'));
     }
