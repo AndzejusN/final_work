@@ -33,7 +33,6 @@ class ProductController extends Controller
 
     public function create(Requests\Inquiry\InquiryCreateRequest $request)
     {
-
         $validated = $request->validated();
 
         $validated += ['user_id' => Auth::user()->id];
@@ -46,4 +45,14 @@ class ProductController extends Controller
 
         return view('workplace.products', compact('products', 'measures'));
     }
+
+    public function update(Requests\Inquiry\InquiryUpdateRequest $request, $id)
+    {
+        $validated = $request->validated();
+
+        $validated += ['filled' => 1];
+
+        Models\Product::where('id',$id)->update($validated);
+    }
 }
+

@@ -5,7 +5,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <div style="height: 500px; overflow-y: scroll;" class="row d-flex justify-content-around align-items-start">
+                    <div style="height: 500px; overflow-y: scroll;"
+                         class="row d-flex justify-content-around align-items-start">
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             @if(isset($inquiries))
                                 @foreach($inquiries as $inquiry)
@@ -13,7 +14,7 @@
                                           class="card-body p-1 text-center"
                                           method="GET">
                                         @csrf
-                                        <input type="number" hidden value="{{$inquiry->id}}" name="id" id="id">
+{{--                                        <input type="number" hidden value="{{$inquiry->id}}" name="id" id="id">--}}
                                         <div class="d-flex row justify-content-between" style="border-radius: 1rem;"
                                              id="main-input">
                                             <table>
@@ -53,7 +54,7 @@
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             @if(isset($products))
                                 @foreach($products as $product)
-                                    <form method="POST" action="#" class="py-1">
+                                    <form method="POST" action="{{ route ('workplace.update', ['id' => $product->id]) }}" class="py-1">
                                         @csrf
                                         <div class="card shadow-2-strong" style="border-radius: 1rem;" id="main-input">
                                             <div class="card-body p-3 text-start">

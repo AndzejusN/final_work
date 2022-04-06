@@ -37,7 +37,9 @@ class InquiryController extends Controller
 
     public function show($id)
     {
-        $products = Models\Product::where('inquiry_id', $id)->get();
+        $products = Models\Product::where('inquiry_id', $id)
+            ->where('filled', 0)
+            ->get();
 
         $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
             ->distinct()

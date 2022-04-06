@@ -29,6 +29,6 @@ Route::delete('/workplace/delete/{id}', [Products\ProductController::class,'dele
 Route::get('/workplace/products', [Products\ProductController::class,'index'])->middleware(['auth'])->name('workplace.products');
 Route::get('/workplace/checkout', [Inquiries\InquiryController::class,'create'])->middleware(['auth'])->name('workplace.checkout');
 Route::get('/workplace/show/{id}', [Inquiries\InquiryController::class,'show'])->middleware(['auth'])->name('workplace.show');
-
+Route::post('/workplace/update/{id}', [Products\ProductController::class,'update'])->middleware(['auth'])->name('workplace.update');
 
 require __DIR__ . '/auth.php';

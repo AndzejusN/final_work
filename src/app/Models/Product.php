@@ -21,7 +21,8 @@ class Product extends Model
         'delivery_term',
         'conditions',
         'inquiry_id',
-        'user_id'
+        'user_id',
+        'filled'
     ];
 
 
