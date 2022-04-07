@@ -16,11 +16,23 @@ class InquiryController extends Controller
         $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
             ->distinct()
             ->orderBy('id', 'DESC')
-            ->where('inquiry_state','Empty')
+            ->where('inquiry_state', 'Empty')
             ->paginate(6);
 
         return view('workplace', compact('inquiries'));
 
+    }
+
+    public function confirmation()
+    {
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+            ->distinct()
+            ->orderBy('id', 'DESC')
+            ->where('inquiry_state', 'Partly')
+            ->where('user_id', Auth::user()->id)
+            ->paginate(6);
+
+        return view('workplace.confirmation', compact('inquiries'));
     }
 
     public function create(Request $request)
@@ -45,9 +57,24 @@ class InquiryController extends Controller
         $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
             ->distinct()
             ->orderBy('id', 'DESC')
-            ->where('inquiry_state','Empty')
-            ->paginate(7);
+            ->where('inquiry_state', 'Empty')
+            ->paginate(6);
 
         return view('workplace', compact('inquiries', 'products'));
+    }
+
+    public function view($id)
+    {
+        $products = Models\Product::where('inquiry_id', $id)
+            ->get();
+
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+            ->distinct()
+            ->orderBy('id', 'DESC')
+            ->where('inquiry_state', 'Partly')
+            ->where('user_id', Auth::user()->id)
+            ->paginate(6);
+
+        return view('workplace.confirmation', compact('inquiries', 'products'));
     }
 }

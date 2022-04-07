@@ -52,8 +52,8 @@
                                                    required autofocus/>
                                         </div>
                                         <div class="text-center pt-4">
-                                            <button style="min-width: 100%" class="btn btn-dark text-center"
-                                                    type="submit" id="main-submit">
+                                            <button style="min-width: 100%" class="btn btn-dark text-center main-submit"
+                                                    type="submit">
                                                 A D D | P R O D U C T
                                             </button>
                                         </div>
@@ -76,8 +76,8 @@
                                             <div class="w-auto my-2"> {{$product->measure}}</div>
                                             <div class="w-auto my-2"> {{$product->quantity}}</div>
                                             <div class="w-auto my-2">
-                                                <button class="btn btn-dark text-center"
-                                                        type="submit" id="main-submit">
+                                                <button class="btn btn-dark text-center main-submit"
+                                                        type="submit">
                                                     D E L E T E | P R O D U C T
                                                 </button>
                                             </div>
@@ -85,8 +85,8 @@
                                     </form>
                                 @endforeach
                                 <div class="my-2">
-                                    <a style="min-width: 100%" class="btn btn-dark text-center"
-                                       role="button" id="main-submit" href="{{route('workplace.checkout')}}">
+                                    <a style="min-width: 100%" class="btn btn-dark text-center main-submit"
+                                       role="button" href="{{route('workplace.checkout')}}">
                                         S E N D | I N Q U I R Y
                                     </a>
                                 </div>

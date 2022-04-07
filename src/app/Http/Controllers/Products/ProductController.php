@@ -31,6 +31,42 @@ class ProductController extends Controller
         return view('workplace.products', compact('products', 'measures'));
     }
 
+    public function change($id)
+    {
+        $product = Models\Product::where('id', $id);
+        $product->delete();
+
+        $inquiry_id = Models\Product::where('id', $id)->pluck('inquiry_id');
+
+        $count = Models\Product::where('inquiry_id', $inquiry_id)->count();
+
+        if ($count == 0) {
+
+            $empty = Models\Inquiry::where('id', $inquiry_id);
+            $empty->delete();
+        }
+
+        $products = Models\Product::where('inquiry_id', $inquiry_id)->where('filled', 1);
+
+        $all_same_inquiry = Models\Product::where('inquiry_id', $inquiry_id);
+
+        $just_filled_sum = $all_same_inquiry->pluck('filled')->sum();
+
+        if ($just_filled_sum == 0) {
+
+            Models\Inquiry::where('id', $inquiry_id)->update(['inquiry_state' => 'Fully']);
+        }
+
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+            ->distinct()
+            ->orderBy('id', 'DESC')
+            ->where('inquiry_state', 'Partly')
+            ->where('user_id', Auth::user()->id)
+            ->paginate(6);
+
+        return view('workplace.confirmation', compact('inquiries', 'products'));
+    }
+
     public function create(Requests\Inquiry\InquiryCreateRequest $request)
     {
         $validated = $request->validated();
@@ -80,5 +116,32 @@ class ProductController extends Controller
             ->get();
 
         return view('workplace', compact('inquiries', 'products'));
+    }
+
+    public function add($id)
+    {
+        Models\Product::where('id', $id)->update(['filled' => 0]);
+
+        $inquiry_id = Models\Product::where('id', $id)->pluck('inquiry_id');
+
+        $products = Models\Product::where('inquiry_id', $inquiry_id)->where('filled', 1);
+
+        $all_same_inquiry = Models\Product::where('inquiry_id', $inquiry_id);
+
+        $just_filled_sum = $all_same_inquiry->pluck('filled')->sum();
+
+        if ($just_filled_sum == 0) {
+
+            Models\Inquiry::where('id', $inquiry_id)->update(['inquiry_state' => 'Fully']);
+        }
+
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+            ->distinct()
+            ->orderBy('id', 'DESC')
+            ->where('inquiry_state', 'Partly')
+            ->where('user_id', Auth::user()->id)
+            ->paginate(6);
+        
+        return view('workplace.confirmation', compact('inquiries', 'products'));
     }
 }

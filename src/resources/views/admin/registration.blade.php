@@ -65,7 +65,7 @@
                             </select>
                         </div>
                         <div class="w-25 mb-5 px-2">
-                            <button class="btn btn-dark" type="submit" id="main-submit">A D D | U S E R</button>
+                            <button class="btn btn-dark main-submit" type="submit">A D D | U S E R</button>
                         </div>
                     </div>
                 </div>

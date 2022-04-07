@@ -39,7 +39,7 @@
                         <td>{{$user->is_active}}</td>
                         <td>
                             <div>
-                                <button class="btn btn-dark" type="submit" id="main-submit">D E L E T E | U S E R
+                                <button class="btn btn-dark main-submit" type="submit">D E L E T E | U S E R
                                 </button>
                             </div>
                         </td>

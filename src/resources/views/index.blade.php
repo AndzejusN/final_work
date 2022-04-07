@@ -13,7 +13,7 @@
             <form method="POST" action="{{ route('logged') }}">
                 @csrf
 
-                <div class="card shadow-2-strong" style="border-radius: 1rem;" id="main-input">
+                <div class="card shadow-2-strong main-input" style="border-radius: 1rem;">
                     <div class="card-body p-3 text-center">
                         <div class="form-outline py-2">
                             <input type="email" name="email" id="email" class="form-control form-control-sm"
@@ -25,7 +25,7 @@
                                    placeholder="Password" required autocomplete="current-password"/>
                             <label class="form-label" for="password" :value="__('Password')"></label>
                         </div>
-                        <button class="btn btn-dark" type="submit" id="main-submit">L O G | I N</button>
+                        <button class="btn btn-dark main-submit" type="submit">L O G | I N</button>
                     </div>
                 </div>
             </form>

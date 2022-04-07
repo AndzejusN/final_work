@@ -10,12 +10,12 @@
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             @if(isset($inquiries))
                                 @foreach($inquiries as $inquiry)
-                                    <form action="{{ route ('workplace.show', ['id' => $inquiry->id]) }}"
+                                    <form action="{{ route ('workplace.view', ['id' => $inquiry->id]) }}"
                                           class="card-body p-1 text-center"
                                           method="GET">
                                         @csrf
-                                        <div class="d-flex row justify-content-between main-input" style="border-radius: 1rem;"
-                                             >
+                                        <div class="d-flex row justify-content-between" style="border-radius: 1rem;"
+                                             id="main-input">
                                             <table>
                                                 <tbody>
                                                 <tr>
@@ -25,7 +25,7 @@
                                                     <th rowspan="2">
                                                         <button class="btn btn-dark text-center align-items-center main-submit"
                                                                 type="submit">
-                                                            O P E N | I N Q U I R Y
+                                                            O P E N | O F F E R
                                                         </button>
                                                     </th>
                                                 </tr>
@@ -53,9 +53,11 @@
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             @if(isset($products))
                                 @foreach($products as $product)
-                                    <form method="POST" action="{{ route ('workplace.update', ['id' => $product->id]) }}" class="py-1">
+                                    <form method="GET"
+                                          action="{{ route ('workplace.add', ['id' => $product->id]) }}"
+                                          class="py-1">
                                         @csrf
-                                        <div class="card shadow-2-strong main-input" style="border-radius: 1rem;">
+                                        <div class="card shadow-2-strong" style="border-radius: 1rem;" id="main-input">
                                             <div class="card-body p-3 text-start">
                                                 <div class="form-outline py-1">
                                                     <label class="form-label" for="name">Name:</label>
@@ -90,31 +92,33 @@
                                                 </div>
 
                                                 <div class="form-outline py-1">
-                                                    <label class="form-label" for="price"
-                                                           :value="__('Price')">Price:</label>
+                                                    <label class="form-label" for="price">Price:</label>
                                                     <input type="number" name="price" id="price"
-                                                           class="form-control form-control-sm" :value="old('price')"
-                                                           required autofocus/>
+                                                           class="form-control form-control-sm"
+                                                           placeholder="{{ $product->price }}" readonly/>
                                                 </div>
                                                 <div class="form-outline py-1">
-                                                    <label class="form-label" for="delivery_term"
-                                                           :value="__('Delivery_term')">Delivery term:</label>
+                                                    <label class="form-label" for="delivery_term">Delivery term:</label>
                                                     <input type="number" name="delivery_term" id="delivery_term"
                                                            class="form-control form-control-sm"
-                                                           :value="old('delivery_term')"
-                                                           required autofocus/>
+                                                           placeholder="{{ $product->delivery_term }}"
+                                                           readonly/>
                                                 </div>
                                                 <div class="form-outline py-1">
-                                                    <label for="conditions"
-                                                           :value="__('Conditions')">Conditions:</label>
+                                                    <label for="conditions">Conditions:</label>
                                                     <textarea class="form-control" style="min-width: 100%"
-                                                              id="description"
-                                                              name="conditions" :value="old('conditions')"></textarea>
+                                                              id="description" name="conditions" readonly>{{ $product->conditions }}</textarea>
                                                 </div>
                                                 <div class="text-center pt-4">
                                                     <button style="min-width: 100%" class="btn btn-dark text-center main-submit"
                                                             type="submit">
-                                                        M A K E | O F F E R
+                                                        C O N F I R M | O F F E R
+                                                    </button>
+                                                </div>
+                                                <div class="text-center pt-4">
+                                                    <button style="min-width: 100%" class="btn btn-dark text-center main-submit"
+                                                            type="button" data-action="delete" data-product-id="{{ $product->id }}">
+                                                        D E L E T E | O F F E R
                                                     </button>
                                                 </div>
                                             </div>

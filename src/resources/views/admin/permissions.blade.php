@@ -53,7 +53,7 @@
                     </td>
                     <td>
                         <div>
-                            <button class="btn btn-dark" type="submit" id="main-submit">S A V E | C H A N G E S</button>
+                            <button class="btn btn-dark main-submit" type="submit">S A V E | C H A N G E S</button>
                         </div>
                     </td>
                 </tr>

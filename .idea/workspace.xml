@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Inquiry change state to Partly, when products filled // TODO on reload must see left not filled products">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Reply finished">
+      <change afterPath="$PROJECT_DIR$/src/resources/views/workplace/confirmation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Products/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Products/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/back.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/back.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/inquiry.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/inquiry.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +177,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/views/workplace" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -170,11 +188,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views\workplace" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Controllers\Inquiries" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\resources\views\admin" />
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\public\img" />
-      <recent name="C:\Users\rainl\Desktop\CA_final_work\src\storage\framework" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rainl\Desktop\CA_final_work\src\app\Http\Controllers\Products" />
@@ -246,7 +264,10 @@
       <workItem from="1649090384948" duration="11608000" />
       <workItem from="1649138488027" duration="12591000" />
       <workItem from="1649181100952" duration="11234000" />
-      <workItem from="1649263832976" duration="8936000" />
+      <workItem from="1649263832976" duration="9011000" />
+      <workItem from="1649329717967" duration="10294000" />
+      <workItem from="1649352610857" duration="13855000" />
+      <workItem from="1649371833762" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -437,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649271869839</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Reply finished">
+      <created>1649273953011</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1649273953011</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +485,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added SoftDelete/ Changed Inquiry States data" />
     <MESSAGE value="Auth / Breeze" />
     <MESSAGE value="Auth / Breeze 2" />
     <MESSAGE value="Auth / Breeze 3" />
@@ -482,7 +509,8 @@
     <MESSAGE value="Inquiries list visualization 70 perc." />
     <MESSAGE value="Update product / Supplier side / Part" />
     <MESSAGE value="Inquiry change state to Partly, when products filled // TODO on reload must see left not filled products" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inquiry change state to Partly, when products filled // TODO on reload must see left not filled products" />
+    <MESSAGE value="Reply finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reply finished" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

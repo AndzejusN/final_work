@@ -13,19 +13,19 @@ body {
     width: 300px;
 }
 
-#main-input {
+.main-input {
     background-color: rgb(219, 228, 241);
     border: 2px solid #ffffff;
 }
 
-#main-submit{
+.main-submit{
     border: 2px solid #ffffff;
     background-color: #a7b7e0;
     font-family: "Times New Roman", Times, serif;
     letter-spacing: -1px;
 }
 
-#main-submit:hover{
+.main-submit:hover{
     color: #a7b7e0;
     background-color: #ffffff;
     text-shadow: none;
