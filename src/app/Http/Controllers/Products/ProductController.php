@@ -34,14 +34,13 @@ class ProductController extends Controller
     public function change($id)
     {
         $product = Models\Product::where('id', $id);
-        $product->delete();
-
         $inquiry_id = Models\Product::where('id', $id)->pluck('inquiry_id');
+
+        $product->delete();
 
         $count = Models\Product::where('inquiry_id', $inquiry_id)->count();
 
         if ($count == 0) {
-
             $empty = Models\Inquiry::where('id', $inquiry_id);
             $empty->delete();
         }
@@ -141,7 +140,7 @@ class ProductController extends Controller
             ->where('inquiry_state', 'Partly')
             ->where('user_id', Auth::user()->id)
             ->paginate(6);
-        
+
         return view('workplace.confirmation', compact('inquiries', 'products'));
     }
 }

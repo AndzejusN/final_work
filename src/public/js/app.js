@@ -6091,13 +6091,11 @@ var _loop = function _loop() {
     var id = element.getAttribute('data-product-id');
     var url = '/workplace/change/';
     url += id;
-    {
-      fetch(url).then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        data = data.products;
-      });
-    }
+    fetch(url, {
+      method: "GET"
+    }).then(function () {
+      window.location.reload();
+    });
   });
 };
 
