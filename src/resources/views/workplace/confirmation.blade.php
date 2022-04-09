@@ -54,7 +54,7 @@
                             @if(isset($products))
                                 @foreach($products as $product)
                                     <form method="GET"
-                                          action="{{ route ('workplace.add', ['id' => $product->id]) }}"
+                                          action="{{ route ('workplace.order', ['id' => $product->id]) }}"
                                           class="py-1">
                                         @csrf
                                         <div class="card shadow-2-strong" style="border-radius: 1rem;" id="main-input">

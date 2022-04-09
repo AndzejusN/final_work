@@ -61,7 +61,7 @@ class ProductController extends Controller
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Partly')
             ->where('user_id', Auth::user()->id)
-            ->paginate(6);
+            ->paginate(10);
 
         return view('workplace.confirmation', compact('inquiries', 'products'));
     }
@@ -139,7 +139,35 @@ class ProductController extends Controller
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Partly')
             ->where('user_id', Auth::user()->id)
-            ->paginate(6);
+            ->paginate(10);
+
+        return view('workplace.confirmation', compact('inquiries', 'products'));
+    }
+
+    public function order($id)
+    {
+        Models\Product::where('id', $id)->update(['filled' => 2]);
+
+        $inquiry_id = Models\Product::where('id', $id)->pluck('inquiry_id');
+
+        $all_same_number = Models\Product::where('inquiry_id', $inquiry_id)->count();
+
+        $all_same_inquiry = Models\Product::where('inquiry_id', $inquiry_id);
+
+        $just_filled_sum = $all_same_inquiry->pluck('filled')->sum();
+
+        if ($just_filled_sum == ($all_same_number * 2)) {
+            Models\Inquiry::where('id', $inquiry_id)->update(['inquiry_state' => 'Fully']);
+        }
+
+        $products = Models\Product::where('inquiry_id', $inquiry_id)->where('filled', 1)->get();
+
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+            ->distinct()
+            ->orderBy('id', 'DESC')
+            ->where('inquiry_state', 'Partly')
+            ->where('user_id', Auth::user()->id)
+            ->paginate(10);
 
         return view('workplace.confirmation', compact('inquiries', 'products'));
     }

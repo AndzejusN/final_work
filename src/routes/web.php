@@ -28,6 +28,7 @@ Route::post('/workplace/create', [Products\ProductController::class,'create'])->
 Route::delete('/workplace/delete/{id}', [Products\ProductController::class,'delete'])->middleware(['auth'])->name('workplace.delete');
 Route::get('/workplace/change/{id}', [Products\ProductController::class,'change'])->middleware(['auth'])->name('workplace.change');
 Route::get('/workplace/add/{id}', [Products\ProductController::class,'add'])->middleware(['auth'])->name('workplace.add');
+Route::get('/workplace/order/{id}', [Products\ProductController::class,'order'])->middleware(['auth'])->name('workplace.order');
 Route::get('/workplace/products', [Products\ProductController::class,'index'])->middleware(['auth'])->name('workplace.products');
 Route::post('/workplace/update/{id}', [Products\ProductController::class,'update'])->middleware(['auth'])->name('workplace.update');
 Route::get('/workplace/checkout', [Inquiries\InquiryController::class,'create'])->middleware(['auth'])->name('workplace.checkout');

@@ -30,7 +30,7 @@ class InquiryController extends Controller
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Partly')
             ->where('user_id', Auth::user()->id)
-            ->paginate(6);
+            ->paginate(15);
 
         return view('workplace.confirmation', compact('inquiries'));
     }
@@ -73,7 +73,7 @@ class InquiryController extends Controller
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Partly')
             ->where('user_id', Auth::user()->id)
-            ->paginate(6);
+            ->paginate(15);
 
         return view('workplace.confirmation', compact('inquiries', 'products'));
     }

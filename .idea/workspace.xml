@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Confirmation / 70 perc.">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Confirmation / 80 perc.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Products/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Products/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_03_03_093419_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/confirmation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/confirmation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +254,7 @@
       <workItem from="1649329717967" duration="10294000" />
       <workItem from="1649352610857" duration="13855000" />
       <workItem from="1649371833762" duration="170000" />
-      <workItem from="1649428631750" duration="3144000" />
+      <workItem from="1649428631750" duration="7947000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -458,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649371960832</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Confirmation / 80 perc.">
+      <created>1649431847609</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1649431847609</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Auth / Breeze 2" />
     <MESSAGE value="Auth / Breeze 3" />
     <MESSAGE value="Auth / Breeze 4" />
     <MESSAGE value="Routes prefix used" />
@@ -503,7 +510,8 @@
     <MESSAGE value="Inquiry change state to Partly, when products filled // TODO on reload must see left not filled products" />
     <MESSAGE value="Reply finished" />
     <MESSAGE value="Confirmation / 70 perc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Confirmation / 70 perc." />
+    <MESSAGE value="Confirmation / 80 perc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Confirmation / 80 perc." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

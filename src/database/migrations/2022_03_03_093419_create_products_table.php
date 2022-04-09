@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('conditions',255)->nullable();
             $table->bigInteger('inquiry_id')->unsigned()->nullable();
             $table->bigInteger('user_id')->unsigned()->nullable();
-            $table->boolean('filled')->unsigned()->default(0);
+            $table->smallInteger('filled')->unsigned()->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
