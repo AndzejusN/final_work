@@ -10,4 +10,12 @@ class Measure extends Model
     use HasFactory;
 
     protected $table = 'product_measures';
+
+
+    public function product()
+    {
+        return $this->hasMany(Product::class, 'measure', 'name');
+    }
 }
+
+

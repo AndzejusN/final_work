@@ -19,7 +19,8 @@ class InquiryStatesSeeder extends Seeder
         $states = [
             'Empty',
             'Partly',
-            'Fully'
+            'Fully',
+            'Done',
         ];
 
         foreach ($states as $state) {

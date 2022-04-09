@@ -171,4 +171,23 @@ class ProductController extends Controller
 
         return view('workplace.confirmation', compact('inquiries', 'products'));
     }
+
+    public function byorder($id)
+    {
+
+        $product = Models\Product::where('id', $id);
+
+        $inquiry_id = Models\Product::where('id', $id)->pluck('inquiry_id');
+
+        $products = $product->where('inquiry_id', $inquiry_id)->get();
+
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+            ->distinct()
+            ->orderBy('id', 'DESC')
+            ->where('inquiry_state', 'Fully')
+            ->where('user_id', Auth::user()->id)
+            ->paginate(15);
+
+        return view('workplace.orders', compact('inquiries','products'));
+    }
 }
