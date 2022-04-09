@@ -38,5 +38,6 @@ Route::get('/workplace/order/{id}', [Products\ProductController::class,'order'])
 Route::get('/workplace/products', [Products\ProductController::class,'index'])->middleware(['auth'])->name('workplace.products');
 Route::post('/workplace/update/{id}', [Products\ProductController::class,'update'])->middleware(['auth'])->name('workplace.update');
 Route::get('/workplace/byorder/{id}', [Products\ProductController::class,'byorder'])->middleware(['auth'])->name('workplace.byorder');
+Route::get('/workplace/ordered/{id}', [Products\ProductController::class,'ordered'])->middleware(['auth'])->name('workplace.ordered');
 
 require __DIR__ . '/auth.php';

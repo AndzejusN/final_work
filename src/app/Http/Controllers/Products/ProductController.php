@@ -174,12 +174,8 @@ class ProductController extends Controller
 
     public function byorder($id)
     {
-
-        $product = Models\Product::where('id', $id);
-
-        $inquiry_id = Models\Product::where('id', $id)->pluck('inquiry_id');
-
-        $products = $product->where('inquiry_id', $inquiry_id)->get();
+        $products = Models\Product::where('inquiry_id', $id)->where('filled', 2)
+            ->get();
 
         $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
             ->distinct()
@@ -188,6 +184,34 @@ class ProductController extends Controller
             ->where('user_id', Auth::user()->id)
             ->paginate(15);
 
-        return view('workplace.orders', compact('inquiries','products'));
+        return view('workplace.orders', compact('inquiries', 'products'));
+    }
+
+    public function ordered($id)
+    {
+        Models\Product::where('id', $id)->update(['filled' => 3]);
+
+        $inquiry_id = Models\Product::where('id', $id)->pluck('inquiry_id');
+
+        $all_same_number = Models\Product::where('inquiry_id', $inquiry_id)->count();
+
+        $all_same_inquiry = Models\Product::where('inquiry_id', $inquiry_id);
+
+        $just_filled_sum = $all_same_inquiry->pluck('filled')->sum();
+
+        if ($just_filled_sum == ($all_same_number * 3)) {
+            Models\Inquiry::where('id', $inquiry_id)->update(['inquiry_state' => 'Done']);
+        }
+
+        $products = Models\Product::where('inquiry_id', $inquiry_id)->where('filled', 2)->get();
+
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+            ->distinct()
+            ->orderBy('id', 'DESC')
+            ->where('inquiry_state', 'Fully')
+            ->where('user_id', Auth::user()->id)
+            ->paginate(10);
+
+        return view('workplace.orders', compact('inquiries', 'products'));
     }
 }

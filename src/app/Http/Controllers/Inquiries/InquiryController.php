@@ -89,5 +89,4 @@ class InquiryController extends Controller
 
         return view('workplace.orders', compact('inquiries'));
     }
-
 }

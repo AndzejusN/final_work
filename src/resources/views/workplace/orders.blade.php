@@ -53,7 +53,7 @@
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             @if(isset($products))
                                 @foreach($products as $product)
-                                    <form method="POST" action="{{ route ('workplace.byorder', ['id' => $product->id]) }}" class="py-1">
+                                    <form method="GET" action="{{ route ('workplace.ordered', ['id' => $product->id]) }}" class="py-1">
                                         @csrf
                                         <div class="card shadow-2-strong main-input" style="border-radius: 1rem;">
                                             <div class="card-body p-3 text-start">
