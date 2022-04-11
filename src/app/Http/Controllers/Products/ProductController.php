@@ -34,7 +34,7 @@ class ProductController extends Controller
             $response = ['negative' => 'Error, product was not deleted'];
         }
 
-        return view('workplace.products', compact('products', 'measures','response'));
+        return view('workplace.products', compact('products', 'measures', 'response'));
     }
 
     public function change($id)
@@ -93,7 +93,7 @@ class ProductController extends Controller
 
         $validated += ['filled' => 1];
 
-        Models\Product::where('id', $id)->update($validated);
+        $check = Models\Product::where('id', $id)->update($validated);
 
         $updated_product = Models\Product::where('id', $id)->get();
 
@@ -120,7 +120,13 @@ class ProductController extends Controller
             ->where('filled', 0)
             ->get();
 
-        return view('workplace', compact('inquiries', 'products'));
+        if ($check) {
+            $response = ['positive' => 'Offer was successfully made'];
+        } else {
+            $response = ['negative' => 'Error, offer was not saved'];
+        }
+
+        return view('workplace', compact('inquiries', 'products', 'response'));
     }
 
     public function add($id)
@@ -152,7 +158,7 @@ class ProductController extends Controller
 
     public function order($id)
     {
-        Models\Product::where('id', $id)->update(['filled' => 2]);
+        $check = Models\Product::where('id', $id)->update(['filled' => 2]);
 
         $inquiry_id = Models\Product::where('id', $id)->pluck('inquiry_id');
 
@@ -175,7 +181,13 @@ class ProductController extends Controller
             ->where('user_id', Auth::user()->id)
             ->paginate(10);
 
-        return view('workplace.confirmation', compact('inquiries', 'products'));
+        if ($check) {
+            $response = ['positive' => 'Offer was successfully confirmed'];
+        } else {
+            $response = ['negative' => 'Error, offer was not confirmed'];
+        }
+
+        return view('workplace.confirmation', compact('inquiries', 'products', 'response'));
     }
 
     public function byorder($id)
@@ -195,7 +207,7 @@ class ProductController extends Controller
 
     public function ordered($id)
     {
-        Models\Product::where('id', $id)->update(['filled' => 3]);
+        $check = Models\Product::where('id', $id)->update(['filled' => 3]);
 
         $inquiry_id = Models\Product::where('id', $id)->pluck('inquiry_id');
 
@@ -218,6 +230,12 @@ class ProductController extends Controller
             ->where('user_id', Auth::user()->id)
             ->paginate(10);
 
-        return view('workplace.orders', compact('inquiries', 'products'));
+        if ($check) {
+            $response = ['positive' => 'Order successfully was closed'];
+        } else {
+            $response = ['negative' => 'Error, order was not closed'];
+        }
+
+        return view('workplace.orders', compact('inquiries', 'products','response'));
     }
 }

@@ -1,5 +1,4 @@
 @extends('main')
-
 @section('content')
 
     <div class="row d-flex justify-content-center align-items-center h-50 py-12">

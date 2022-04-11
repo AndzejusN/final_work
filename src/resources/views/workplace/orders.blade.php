@@ -51,10 +51,23 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                            @if(isset($products))
+                            <div class="d-flex justify-content-center align-items-center w-full mt-4">
+                                @if(isset($response['negative']))
+                                    <div class="alert alert-danger w-full text-center response">
+                                        {{$response['negative']}}
+                                    </div>
+                                @endif
+                                @if(isset($response['positive']))
+                                    <div class="alert alert-success w-full text-center response">
+                                        {{$response['positive']}}
+                                    </div>
+                                @endif
+                            </div>
+                        @if(isset($products))
                                 @foreach($products as $product)
                                     <form method="GET" action="{{ route ('workplace.ordered', ['id' => $product->id]) }}" class="py-1">
                                         @csrf
+
                                         <div class="card shadow-2-strong main-input" style="border-radius: 1rem;">
                                             <div class="card-body p-3 text-start">
                                                 <div class="form-outline py-1">
