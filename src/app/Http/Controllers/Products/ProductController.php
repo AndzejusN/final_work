@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Products;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
@@ -200,7 +199,7 @@ class ProductController extends Controller
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Fully')
             ->where('user_id', Auth::user()->id)
-            ->paginate(15);
+            ->paginate(10);
 
         return view('workplace.orders', compact('inquiries', 'products'));
     }

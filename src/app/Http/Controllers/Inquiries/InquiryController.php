@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Inquiries;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class InquiryController extends Controller
@@ -17,7 +16,7 @@ class InquiryController extends Controller
             ->distinct()
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Empty')
-            ->paginate(6);
+            ->paginate(10);
 
         return view('workplace', compact('inquiries'));
 
@@ -30,12 +29,12 @@ class InquiryController extends Controller
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Partly')
             ->where('user_id', Auth::user()->id)
-            ->paginate(15);
+            ->paginate(10);
 
         return view('workplace.confirmation', compact('inquiries'));
     }
 
-    public function create(Request $request)
+    public function create()
     {
         $inquiry = new Models\Inquiry;
         $inquiry->user_id = Auth::user()->id;
@@ -64,7 +63,7 @@ class InquiryController extends Controller
             ->distinct()
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Empty')
-            ->paginate(6);
+            ->paginate(10);
 
         return view('workplace', compact('inquiries', 'products'));
     }
@@ -79,7 +78,7 @@ class InquiryController extends Controller
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Partly')
             ->where('user_id', Auth::user()->id)
-            ->paginate(15);
+            ->paginate(10);
 
         return view('workplace.confirmation', compact('inquiries', 'products'));
     }
@@ -91,7 +90,7 @@ class InquiryController extends Controller
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Fully')
             ->where('user_id', Auth::user()->id)
-            ->paginate(15);
+            ->paginate(10);
 
         return view('workplace.orders', compact('inquiries'));
     }
@@ -99,7 +98,7 @@ class InquiryController extends Controller
     public function total()
     {
         $inquiries = Models\Inquiry::orderBy('id', 'DESC')
-            ->paginate(15);
+            ->paginate(10);
 
         return view('workplace.total', compact('inquiries'));
     }
@@ -109,7 +108,7 @@ class InquiryController extends Controller
         $products = Models\Product::where('id',$id)->get();
 
         $inquiries = Models\Inquiry::orderBy('id', 'DESC')
-            ->paginate(15);
+            ->paginate(10);
 
         return view('workplace.total', compact('inquiries','products'));
     }
