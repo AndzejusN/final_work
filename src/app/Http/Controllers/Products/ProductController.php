@@ -22,13 +22,19 @@ class ProductController extends Controller
 
         $product = Models\Product::where('id', $id);
 
-        $product->delete();
+        $check = $product->delete();
 
         $measures = Models\Measure::get();
 
         $products = Models\Product::where('inquiry_id', null)->get();
 
-        return view('workplace.products', compact('products', 'measures'));
+        if ($check) {
+            $response = ['positive' => 'Product was successfully deleted'];
+        } else {
+            $response = ['negative' => 'Error, product was not deleted'];
+        }
+
+        return view('workplace.products', compact('products', 'measures','response'));
     }
 
     public function change($id)

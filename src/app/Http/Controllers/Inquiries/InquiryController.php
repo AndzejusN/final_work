@@ -39,13 +39,19 @@ class InquiryController extends Controller
     {
         $inquiry = new Models\Inquiry;
         $inquiry->user_id = Auth::user()->id;
-        $inquiry->save();
+        $check = $inquiry->save();
 
         Models\Product::whereNull('inquiry_id')->update(['inquiry_id' => $inquiry->id]);
 
         $measures = Models\Measure::get();
 
-        return view('workplace.products', compact('measures'));
+        if ($check) {
+            $response = ['inquiry' => 'Inquiry was successfully added'];
+        } else {
+            $response = ['noinquiry' => 'Error, inquiry was not added'];
+        }
+
+        return view('workplace.products', compact('measures','response'));
     }
 
     public function show($id)

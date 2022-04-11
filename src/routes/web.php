@@ -9,35 +9,33 @@ Route::view('/', 'index');
 
 Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
     Route::view('/index', 'admin.index')->name('index');
-    Route::get('/register', [Admin\UserController::class, 'create'])
-        ->name('register');
-    Route::get('/permissions', [Admin\UserController::class, 'show'])
-        ->name('permissions');
-    Route::patch('/permissions/edit/{id}', [Admin\UserController::class, 'edit'])
-        ->name('permissions.edit');
+    Route::get('/register', [Admin\UserController::class, 'create'])->name('register');
+    Route::get('/permissions', [Admin\UserController::class, 'show'])->name('permissions');
+    Route::patch('/permissions/edit/{id}', [Admin\UserController::class, 'edit'])->name('permissions.edit');
     Route::prefix('deregistration')->name('deregistration.')->group(function () {
-        Route::get('/', [Admin\UserController::class, 'registration'])
-            ->name('index');
-        Route::delete('/delete/{id}', [Admin\UserController::class, 'delete'])
-            ->name('delete');
+        Route::get('/', [Admin\UserController::class, 'registration'])->name('index');
+        Route::delete('/delete/{id}', [Admin\UserController::class, 'delete'])->name('delete');
     });
 });
 
 Route::get('/workplace', [Inquiries\InquiryController::class,'index'])->middleware(['auth'])->name('workplace');
-Route::get('/workplace/orders', [Inquiries\InquiryController::class,'orders'])->middleware(['auth'])->name('workplace.orders');
-Route::get('/workplace/checkout', [Inquiries\InquiryController::class,'create'])->middleware(['auth'])->name('workplace.checkout');
-Route::get('/workplace/show/{id}', [Inquiries\InquiryController::class,'show'])->middleware(['auth'])->name('workplace.show');
-Route::get('/workplace/confirmation', [Inquiries\InquiryController::class,'confirmation'])->middleware(['auth'])->name('workplace.confirmation');
-Route::get('/workplace/view/{id}', [Inquiries\InquiryController::class,'view'])->middleware(['auth'])->name('workplace.view');
 
-Route::post('/workplace/create', [Products\ProductController::class,'create'])->middleware(['auth'])->name('workplace.create');
-Route::delete('/workplace/delete/{id}', [Products\ProductController::class,'delete'])->middleware(['auth'])->name('workplace.delete');
-Route::get('/workplace/change/{id}', [Products\ProductController::class,'change'])->middleware(['auth'])->name('workplace.change');
-Route::get('/workplace/add/{id}', [Products\ProductController::class,'add'])->middleware(['auth'])->name('workplace.add');
-Route::get('/workplace/order/{id}', [Products\ProductController::class,'order'])->middleware(['auth'])->name('workplace.order');
-Route::get('/workplace/products', [Products\ProductController::class,'index'])->middleware(['auth'])->name('workplace.products');
-Route::post('/workplace/update/{id}', [Products\ProductController::class,'update'])->middleware(['auth'])->name('workplace.update');
-Route::get('/workplace/byorder/{id}', [Products\ProductController::class,'byorder'])->middleware(['auth'])->name('workplace.byorder');
-Route::get('/workplace/ordered/{id}', [Products\ProductController::class,'ordered'])->middleware(['auth'])->name('workplace.ordered');
+Route::prefix('workplace')->name('workplace.')->middleware(['auth'])->group(function (){
+    Route::get('/orders', [Inquiries\InquiryController::class,'orders'])->middleware(['auth'])->name('orders');
+    Route::get('/checkout', [Inquiries\InquiryController::class,'create'])->middleware(['auth'])->name('checkout');
+    Route::get('/show/{id}', [Inquiries\InquiryController::class,'show'])->middleware(['auth'])->name('show');
+    Route::get('/confirmation', [Inquiries\InquiryController::class,'confirmation'])->middleware(['auth'])->name('confirmation');
+    Route::get('/view/{id}', [Inquiries\InquiryController::class,'view'])->middleware(['auth'])->name('view');
+
+    Route::post('/create', [Products\ProductController::class,'create'])->middleware(['auth'])->name('create');
+    Route::delete('/delete/{id}', [Products\ProductController::class,'delete'])->middleware(['auth'])->name('delete');
+    Route::get('/change/{id}', [Products\ProductController::class,'change'])->middleware(['auth'])->name('change');
+    Route::get('/add/{id}', [Products\ProductController::class,'add'])->middleware(['auth'])->name('add');
+    Route::get('/order/{id}', [Products\ProductController::class,'order'])->middleware(['auth'])->name('order');
+    Route::get('/products', [Products\ProductController::class,'index'])->middleware(['auth'])->name('products');
+    Route::post('/update/{id}', [Products\ProductController::class,'update'])->middleware(['auth'])->name('update');
+    Route::get('/byorder/{id}', [Products\ProductController::class,'byorder'])->middleware(['auth'])->name('byorder');
+    Route::get('/ordered/{id}', [Products\ProductController::class,'ordered'])->middleware(['auth'])->name('ordered');
+});
 
 require __DIR__ . '/auth.php';

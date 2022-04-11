@@ -31,12 +31,13 @@
                                             <label for="description" :value="__('Description')">Product
                                                 description:</label>
                                             <textarea class="form-control" style="min-width: 100%" id="description"
-                                                      name="description" :value="old('description')"></textarea>
+                                                      name="description" :value="old('description')" required
+                                                      autofocus></textarea>
                                         </div>
                                         <div class="form-outline py-1">
                                             <label for="measure">Measurement:</label>
                                             <select class="form-control" style="min-width: 100%" id="measure"
-                                                    name="measure">
+                                                    name="measure" required autofocus>
                                                 <option value="" disabled selected> Please select measurement...
                                                 </option>
                                                 @foreach ($measures as $measure)
@@ -62,8 +63,33 @@
                             </form>
                         </div>
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+
+                            <div class="d-flex justify-content-center align-items-center w-full mt-4 h-25">
+                                @if(isset($response['negative']))
+                                    <div class="alert alert-danger w-full text-center response">
+                                        {{$response['negative']}}
+                                    </div>
+                                @endif
+                                @if(isset($response['positive']))
+                                    <div class="alert alert-success w-full text-center response">
+                                        {{$response['positive']}}
+                                    </div>
+                                @endif
+                                    @if(isset($response['noinquiry']))
+                                        <div class="alert alert-danger w-full text-center response">
+                                            {{$response['noinquiry']}}
+                                        </div>
+                                    @endif
+                                    @if(isset($response['inquiry']))
+                                        <div class="alert alert-success w-full text-center response">
+                                            {{$response['inquiry']}}
+                                        </div>
+                                    @endif
+                            </div>
+
                             @if(isset($products))
                                 @foreach($products as $product)
+
                                     <form action="{{ route('workplace.delete', ['id' => $product->id]) }}"
                                           class="card-body p-3 text-center"
                                           method="POST">
