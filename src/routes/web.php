@@ -26,6 +26,8 @@ Route::prefix('workplace')->name('workplace.')->middleware(['auth'])->group(func
     Route::get('/show/{id}', [Inquiries\InquiryController::class,'show'])->middleware(['auth'])->name('show');
     Route::get('/confirmation', [Inquiries\InquiryController::class,'confirmation'])->middleware(['auth'])->name('confirmation');
     Route::get('/view/{id}', [Inquiries\InquiryController::class,'view'])->middleware(['auth'])->name('view');
+    Route::get('/total', [Inquiries\InquiryController::class,'total'])->middleware(['auth'])->name('total');
+    Route::get('/all/{id}', [Inquiries\InquiryController::class,'all'])->middleware(['auth'])->name('all');
 
     Route::post('/create', [Products\ProductController::class,'create'])->middleware(['auth'])->name('create');
     Route::delete('/delete/{id}', [Products\ProductController::class,'delete'])->middleware(['auth'])->name('delete');

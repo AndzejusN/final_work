@@ -42,6 +42,11 @@
                         {{ __('Orders') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('workplace.total')" :active="request()->routeIs('workplace.total')">
+                        {{ __('Total list') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -115,6 +120,11 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('workplace.orders')" :active="request()->routeIs('workplace.orders')">
                 {{ __('Orders') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('workplace.total')" :active="request()->routeIs('workplace.total')">
+                {{ __('Total list') }}
             </x-responsive-nav-link>
         </div>
         <!-- Responsive Settings Options -->

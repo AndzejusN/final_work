@@ -51,7 +51,7 @@ class InquiryController extends Controller
             $response = ['noinquiry' => 'Error, inquiry was not added'];
         }
 
-        return view('workplace.products', compact('measures','response'));
+        return view('workplace.products', compact('measures', 'response'));
     }
 
     public function show($id)
@@ -94,5 +94,23 @@ class InquiryController extends Controller
             ->paginate(15);
 
         return view('workplace.orders', compact('inquiries'));
+    }
+
+    public function total()
+    {
+        $inquiries = Models\Inquiry::orderBy('id', 'DESC')
+            ->paginate(15);
+
+        return view('workplace.total', compact('inquiries'));
+    }
+
+    public function all($id)
+    {
+        $products = Models\Product::where('id',$id)->get();
+
+        $inquiries = Models\Inquiry::orderBy('id', 'DESC')
+            ->paginate(15);
+
+        return view('workplace.total', compact('inquiries','products'));
     }
 }

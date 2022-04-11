@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('model',100);
             $table->string('description',255);
             $table->string('measure',30);
-            $table->decimal('quantity', 10, 3)->unsigned();
+            $table->bigInteger('quantity')->unsigned();
             $table->decimal('price', 8, 2)->unsigned()->nullable();
             $table->integer('delivery_term')->unsigned()->nullable();
             $table->string('conditions',255)->nullable();
