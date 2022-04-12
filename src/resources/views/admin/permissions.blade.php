@@ -1,5 +1,13 @@
 @extends('main')
 
+@php
+    $user = Auth::user()->permission;
+    if ($user == 'Admin'){
+        $permission = true;
+        } else ($permission = false)
+@endphp
+@if($permission)
+
 @section('content')
 
     <div class="d-flex justify-content-center align-items-center w-full mt-4">
@@ -66,5 +74,10 @@
         </div>
         @include('layouts.back')
     </div>
-
 @endsection
+
+@else
+    <div class="text-center" style="color: white;">
+        <h1>Sorry, you do not have permission to see this content.</h1>
+    </div>
+@endif

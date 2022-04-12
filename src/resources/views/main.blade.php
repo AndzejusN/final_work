@@ -14,7 +14,9 @@
         <div class="row d-flex justify-content-center align-items-center pt-3">
             <img class="logo" src="{{asset('storage/img/logo/logo_universal_2.png')}}" alt="SAND LOGO"/>
         </div>
+
         @yield('content')
+
         <div class="row d-flex justify-content-evenly">
             <div class="row align-items-center">
                 <div class="col-2">

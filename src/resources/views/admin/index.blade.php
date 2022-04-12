@@ -1,18 +1,27 @@
 @extends('main')
+
+@php
+    $user = Auth::user()->permission;
+    if ($user == 'Admin'){
+        $permission = true;
+        } else ($permission = false)
+@endphp
+@if($permission)
+
 @section('content')
 
     <div class="row d-flex justify-content-center align-items-center h-50 py-12">
 
         <a class="btn btn-dark w-75 main-submit" role="button" href="{{ route('admin.register') }}">
-           A D D &ensp; U S E R
+            A D D &ensp; U S E R
         </a>
 
         <a class="btn btn-dark w-75 main-submit" role="button" href="{{route('admin.permissions')}}">
-          U S E R &ensp; P E R M I S S I O N S
+            U S E R &ensp; P E R M I S S I O N S
         </a>
 
         <a class="btn btn-dark w-75 main-submit" role="button" href="{{route('admin.deregistration.index')}}">
-           D E L E T E &ensp; U S E R
+            D E L E T E &ensp; U S E R
         </a>
 
         <a class="btn btn-dark w-75 main-submit" role="button" href="{{route('workplace')}}">
@@ -26,5 +35,10 @@
         </form>
 
     </div>
-
 @endsection
+
+@else
+    <div class="text-center" style="color: white;">
+        <h1>Sorry, you do not have permission to see this content.</h1>
+    </div>
+@endif

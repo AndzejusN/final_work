@@ -1,5 +1,13 @@
 @extends('main')
 
+@php
+    $user = Auth::user()->permission;
+    if ($user == 'Admin'){
+        $permission = true;
+        } else ($permission = false)
+@endphp
+@if($permission)
+
 @section('content')
     <div class="d-flex py-3 h-50 justify-content-center align-items-center">
 
@@ -74,3 +82,9 @@
         </div>
     </div>
 @endsection
+
+@else
+    <div class="text-center" style="color: white;">
+        <h1>Sorry, you do not have permission to see this content.</h1>
+    </div>
+@endif
