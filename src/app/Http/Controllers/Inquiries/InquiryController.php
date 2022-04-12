@@ -11,6 +11,10 @@ class InquiryController extends Controller
 {
     public function index()
     {
+        if ((Auth::user()->permission) == 'Sales') {
+            return redirect()->route('workplace.products');
+        }
+
         $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
             ->distinct()
             ->orderBy('id', 'DESC')

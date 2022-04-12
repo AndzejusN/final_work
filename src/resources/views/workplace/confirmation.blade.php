@@ -8,6 +8,13 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div style="height: 500px; overflow-y: scroll;"
                          class="row d-flex justify-content-around align-items-start">
+                        @php
+                            $user = Auth::user()->permission;
+                            if ($user == 'Admin' || $user == 'Sales'){
+                                $permission = true;
+                                } else ($permission = false)
+                        @endphp
+                        @if($permission)
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             @if(isset($inquiries))
                                 @foreach($inquiries as $inquiry)
@@ -142,6 +149,9 @@
                                 @endforeach
                             @endif
                         </div>
+                        @else
+                            Sorry, you do not have permission to confirm Offer.
+                        @endif
                     </div>
                 </div>
             </div>
