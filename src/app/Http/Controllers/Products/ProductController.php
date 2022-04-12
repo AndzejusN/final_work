@@ -197,7 +197,6 @@ class ProductController extends Controller
             ->distinct()
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Fully')
-            ->where('user_id', Auth::user()->id)
             ->paginate(10);
 
         return view('workplace.orders', compact('inquiries', 'products'));
@@ -225,7 +224,6 @@ class ProductController extends Controller
             ->distinct()
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Fully')
-            ->where('user_id', Auth::user()->id)
             ->paginate(10);
 
         if ($check) {

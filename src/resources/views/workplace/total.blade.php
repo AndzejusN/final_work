@@ -42,10 +42,10 @@
                                                         <div class="w-auto my-1"> {{$inquiry->inquiry_state}}</div>
                                                     </td>
                                                     <td>
-                                                        <div class="w-auto my-1"> {{$inquiry->created_at}}</div>
+                                                        <div class="w-auto my-1"> {{$inquiry->created_at->format('Y-m-d')}}</div>
                                                     </td>
                                                     <td>
-                                                        <div class="w-auto my-1"> {{$inquiry->updated_at}}</div>
+                                                        <div class="w-auto my-1"> {{$inquiry->updated_at->format('Y-m-d')}}</div>
                                                     </td>
                                                 </tr>
                                                 </tbody>

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Waorkplace permissions 95 perc. / one moment not quite nice">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Admin panel / permissions / do not allow to connect another users ...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/deregistration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/permissions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/registration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Products/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Products/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/total.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/total.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +253,7 @@
       <workItem from="1649352610857" duration="13855000" />
       <workItem from="1649371833762" duration="170000" />
       <workItem from="1649428631750" duration="33981000" />
-      <workItem from="1649686597523" duration="31495000" />
+      <workItem from="1649686597523" duration="35387000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -537,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649782638025</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Admin panel / permissions / do not allow to connect another users ...">
+      <created>1649787301269</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1649787301269</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +562,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="3 User types added per seeding (Admin/Sales/Purchase) / Admin panel pagination added" />
     <MESSAGE value="Response for user create/change/delete" />
     <MESSAGE value="Add product by user_id/inquiry_id page added / hardly goes ..." />
     <MESSAGE value="Add product by user_id/inquiry_id page added / hardly goes 2 ..." />
@@ -582,7 +586,8 @@
     <MESSAGE value="Instructions added" />
     <MESSAGE value="Workplace permission 80 perc." />
     <MESSAGE value="Waorkplace permissions 95 perc. / one moment not quite nice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Waorkplace permissions 95 perc. / one moment not quite nice" />
+    <MESSAGE value="Admin panel / permissions / do not allow to connect another users ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin panel / permissions / do not allow to connect another users ..." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

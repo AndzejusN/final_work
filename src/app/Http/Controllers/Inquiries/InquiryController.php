@@ -91,7 +91,6 @@ class InquiryController extends Controller
             ->distinct()
             ->orderBy('id', 'DESC')
             ->where('inquiry_state', 'Fully')
-            ->where('user_id', Auth::user()->id)
             ->paginate(10);
 
         return view('workplace.orders', compact('inquiries'));
@@ -100,12 +99,12 @@ class InquiryController extends Controller
     public function total()
     {
         $inquiries = Models\Inquiry::orderBy('id', 'DESC')
-            ->paginate(10);
+            ->paginate(15);
 
         if ((Auth::user()->permission) == 'Sales') {
             $inquiries = Models\Inquiry::orderBy('id', 'DESC')
                 ->where('user_id', Auth::user()->id)
-                ->paginate(10);
+                ->paginate(15);
         }
 
         return view('workplace.total', compact('inquiries'));
@@ -115,15 +114,15 @@ class InquiryController extends Controller
     {
         $products = Models\Product::where('inquiry_id', $id)->get();
 
-        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state','created_at','updated_at')
             ->distinct()
             ->orderBy('id', 'DESC')
-            ->paginate(10);
+            ->paginate(15);
 
         if ((Auth::user()->permission) == 'Sales') {
             $inquiries = Models\Inquiry::orderBy('id', 'DESC')
                 ->where('user_id', Auth::user()->id)
-                ->paginate(10);
+                ->paginate(15);
         }
 
         return view('workplace.total', compact('inquiries', 'products'));
