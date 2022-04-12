@@ -18,7 +18,6 @@ class ProductController extends Controller
 
     public function delete($id)
     {
-
         $product = Models\Product::where('id', $id);
 
         $check = $product->delete();
@@ -235,6 +234,6 @@ class ProductController extends Controller
             $response = ['negative' => 'Error, order was not closed'];
         }
 
-        return view('workplace.orders', compact('inquiries', 'products','response'));
+        return view('workplace.orders', compact('inquiries', 'products', 'response'));
     }
 }

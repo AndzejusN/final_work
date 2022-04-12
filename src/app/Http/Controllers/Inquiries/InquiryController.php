@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class InquiryController extends Controller
 {
-
     public function index()
     {
         $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
@@ -19,7 +18,6 @@ class InquiryController extends Controller
             ->paginate(10);
 
         return view('workplace', compact('inquiries'));
-
     }
 
     public function confirmation()
@@ -100,16 +98,30 @@ class InquiryController extends Controller
         $inquiries = Models\Inquiry::orderBy('id', 'DESC')
             ->paginate(10);
 
+        if ((Auth::user()->permission) == 'Sales') {
+            $inquiries = Models\Inquiry::orderBy('id', 'DESC')
+                ->where('user_id', Auth::user()->id)
+                ->paginate(10);
+        }
+
         return view('workplace.total', compact('inquiries'));
     }
 
     public function all($id)
     {
-        $products = Models\Product::where('id',$id)->get();
+        $products = Models\Product::where('inquiry_id', $id)->get();
 
-        $inquiries = Models\Inquiry::orderBy('id', 'DESC')
+        $inquiries = Models\Inquiry::select('id', 'user_id', 'inquiry_state')
+            ->distinct()
+            ->orderBy('id', 'DESC')
             ->paginate(10);
 
-        return view('workplace.total', compact('inquiries','products'));
+        if ((Auth::user()->permission) == 'Sales') {
+            $inquiries = Models\Inquiry::orderBy('id', 'DESC')
+                ->where('user_id', Auth::user()->id)
+                ->paginate(10);
+        }
+
+        return view('workplace.total', compact('inquiries', 'products'));
     }
 }

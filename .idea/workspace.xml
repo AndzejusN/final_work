@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Cleaner code / small changes">
-      <change afterPath="$PROJECT_DIR$/src/resources/views/layouts/instructions.blade.php" afterDir="false" />
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Instructions added">
+      <change afterPath="$PROJECT_DIR$/src/routes/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/inquiry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Inquiries/InquiryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Products/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Products/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/confirmation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/confirmation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/orders.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace/total.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace/total.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +262,7 @@
       <workItem from="1649352610857" duration="13855000" />
       <workItem from="1649371833762" duration="170000" />
       <workItem from="1649428631750" duration="33981000" />
-      <workItem from="1649686597523" duration="14796000" />
+      <workItem from="1649686597523" duration="26369000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -517,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649702115049</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Instructions added">
+      <created>1649707029259</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1649707029259</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +550,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Components added - Pagination / Back links 2" />
     <MESSAGE value="Components added - Pagination / Back links 3" />
     <MESSAGE value="Components added - Pagination / Back links 4" />
     <MESSAGE value="3 User types added per seeding (Admin/Sales/Purchase) / Admin panel pagination added" />
@@ -562,7 +574,8 @@
     <MESSAGE value="Response / other pages." />
     <MESSAGE value="Total orders/inquiries - Total list" />
     <MESSAGE value="Cleaner code / small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaner code / small changes" />
+    <MESSAGE value="Instructions added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instructions added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
