@@ -1229,13 +1229,13 @@ body {
     background-color: rgb(219, 228, 241);
     border: 2px solid #ffffff;
 }
-.main-submit{
+.main-submit {
     border: 2px solid #ffffff;
     background-color: #a7b7e0;
     font-family: "Times New Roman", Times, serif;
     letter-spacing: -1px;
 }
-.main-submit:hover{
+.main-submit:hover {
     color: #a7b7e0;
     background-color: #ffffff;
     text-shadow: none;
@@ -1243,6 +1243,16 @@ body {
 }
 .bg-gray-100 {
     background-color: lightsteelblue;
+}
+@media all and (max-width: 768px) {
+
+    #main-footer {
+        flex-direction: column;
+    }
+
+    #main-footer-1, #main-footer-2, #main-footer-3 {
+        width: 100vw;
+    }
 }
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;

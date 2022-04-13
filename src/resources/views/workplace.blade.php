@@ -62,7 +62,7 @@
                             </div>
 
                             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                                <div class="d-flex justify-content-center align-items-center w-full mt-4 h-25">
+                                <div class="d-flex justify-content-center align-items-center w-full mt-1 h-25">
                                     @if(isset($response['negative']))
                                         <div class="alert alert-danger w-full text-center response">
                                             {{$response['negative']}}
