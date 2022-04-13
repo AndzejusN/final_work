@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Testing / corrected few bugs / Done">
+    <list default="true" id="95de4494-5537-4519-8562-22bce16f93ff" name="Changes" comment="Main pages responsive design / AP not done deeper ones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/workplace.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +253,7 @@
       <workItem from="1649371833762" duration="170000" />
       <workItem from="1649428631750" duration="33981000" />
       <workItem from="1649686597523" duration="35477000" />
-      <workItem from="1649847386294" duration="5692000" />
+      <workItem from="1649847386294" duration="10003000" />
     </task>
     <task id="LOCAL-00001" summary="2-nd commit">
       <created>1646669004181</created>
@@ -552,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649793156226</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Main pages responsive design / AP not done deeper ones">
+      <created>1649853258726</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1649853258726</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +576,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add product by user_id/inquiry_id page added / hardly goes ..." />
     <MESSAGE value="Add product by user_id/inquiry_id page added / hardly goes 2 ..." />
     <MESSAGE value="Inquiry page / Add product / Delete products / TODO SEND INQUIRY" />
     <MESSAGE value="Inquiries list page" />
@@ -597,7 +600,8 @@
     <MESSAGE value="Waorkplace permissions 95 perc. / one moment not quite nice" />
     <MESSAGE value="Admin panel / permissions / do not allow to connect another users ..." />
     <MESSAGE value="Testing / corrected few bugs / Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing / corrected few bugs / Done" />
+    <MESSAGE value="Main pages responsive design / AP not done deeper ones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main pages responsive design / AP not done deeper ones" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

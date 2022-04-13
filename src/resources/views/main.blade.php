@@ -19,14 +19,14 @@
 
         <div class="row d-flex justify-content-evenly">
             <div class="row align-items-center" id="main-footer">
-                <div class="col-2" id="main-footer-1">
+                <div class="col-2" id="main-footer-d">
                     <div class="p-2 border text-center">
                         <p>Copyright ©2022</p>
                         <p>MB SAND</p>
                         <p>Visos teisės saugomos</p>
                     </div>
                 </div>
-                <div class="col-8" id="main-footer-2">
+                <div class="col-8" id="main-footer-d">
                     <div class="p-2 border text-center">
                         <p>Kontaktinis tel. +370 609 54 003 </p>
                         <p>El. paštas: andzejus.naimovicius@gmail.com</p>
@@ -34,7 +34,7 @@
                             (angl. cookies)</p>
                     </div>
                 </div>
-                <div class="col-2 " id="main-footer-3">
+                <div class="col-2 " id="main-footer-d">
                     <div class="p-2 border text-center">
                         <span>Powered by:</span>
                         <span><img class="mx-auto d-block" src="{{asset('storage/img/logo/laravel_9_banner_small.png')}}" alt="LARAVEL LOGO"></span>

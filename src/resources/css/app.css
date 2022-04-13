@@ -42,7 +42,7 @@ body {
         flex-direction: column;
     }
 
-    #main-footer-1, #main-footer-2, #main-footer-3 {
+    #main-footer-d {
         width: 100vw;
     }
 }
